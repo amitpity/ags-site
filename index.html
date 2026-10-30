@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 34 34%27%3E%3Ccircle cx=%2717%27 cy=%2717%27 r=%2713%27 fill=%27none%27 stroke=%27%231D4ED8%27 stroke-width=%276%27/%3E%3Ccircle cx=%2717%27 cy=%2717%27 r=%274%27 fill=%27%23F2C12E%27/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Ccircle cx='17' cy='17' r='13' fill='none' stroke='%235B3CF0' stroke-width='6'/%3E%3Ccircle cx='17' cy='17' r='4' fill='%23FF6B3D'/%3E%3C/svg%3E">
 <title>AGS Gym Assistant</title>
 <meta name="description" content="AGS עונה ללקוחות של חדר הכושר שלכם 24/7, שומר כל ליד ושולח תזכורות אוטומטיות. ₪549 לחודש + מע״מ.">
-<meta name="theme-color" content="#1D4ED8">
+<meta name="theme-color" content="#5B3CF0">
 <meta property="og:title" content="AGS · כל הודעה נענית. גם ב־23:47">
 <meta property="og:description" content="עוזר AI לחדרי כושר, קרוספיט, פילאטיס ויוגה. מענה 24/7, רשימת לידים ותזכורות אוטומטיות.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Ccircle cx='17' cy='17' r='13' fill='none' stroke='%231D4ED8' stroke-width='6'/%3E%3Ccircle cx='17' cy='17' r='4' fill='%23F2C12E'/%3E%3C/svg%3E">
+<meta property="og:image" content="img/hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&family=IBM+Plex+Sans+Hebrew:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -20,164 +20,219 @@
 </script>
 <style>
 :root{
-  --bg:#ECEFF3;
-  --bg-2:#E2E7ED;
+  --bg:#FBF7F2;
+  --bg-2:#F4ECE2;
   --surface:#FFFFFF;
-  --surface-2:#F5F7FA;
-  --ink:#12161B;
-  --ink-2:#2A313A;
-  --muted:#525B66;
-  --line:#D2D8DF;
-  --line-2:#E3E7EC;
-  --accent:#1D4ED8;
-  --accent-hover:#1841B8;
+  --surface-2:#FAF5EF;
+  --ink:#1B1730;
+  --ink-2:#3A3452;
+  --muted:#5F5873;
+  --line:#E4D9CB;
+  --line-2:#EFE6DA;
+  --accent:#5B3CF0;
+  --accent-hover:#4A2DD6;
   --accent-ink:#FFFFFF;
-  --accent-soft:#DFE7FC;
-  --plate:#F2C12E;
-  --plate-ink:#241B00;
-  --marker-red:#C8322B;
-  --marker-blue:#1D4ED8;
-  --ok:#137547;
-  --ok-soft:#DDF3E7;
+  --accent-soft:#ECE7FF;
+  --pop:#FF6B3D;
+  --pop-ink:#FFFFFF;
+  --pop-soft:#FFE7DD;
+  --ok:#11804F;
+  --ok-soft:#DCF3E6;
   --danger:#B42318;
   --bubble-in:#FFFFFF;
-  --bubble-out:#D9F0C4;
-  --bubble-out-ink:#12161B;
-  --chat-bg:#DCE3EA;
-  --band:#12161B;
-  --band-ink:#ECEFF3;
-  --band-muted:#A3ADB8;
-  --band-surface:#1B2027;
-  --band-line:#2C333C;
-  --shadow-lg:0 30px 70px -32px rgba(18,22,27,.45),0 8px 20px -12px rgba(18,22,27,.18);
-  --shadow-sm:0 1px 2px rgba(18,22,27,.06),0 2px 8px -2px rgba(18,22,27,.08);
+  --bubble-out:#E3DAFF;
+  --bubble-out-ink:#1B1730;
+  --chat-bg:#EEE8F7;
+  --band:#EFE9FF;
+  --band-ink:#1B1730;
+  --band-muted:#5F5873;
+  --band-surface:#FFFFFF;
+  --band-line:#E2D9FA;
+  --shadow-lg:0 30px 70px -32px rgba(27,23,48,.45),0 8px 20px -12px rgba(27,23,48,.18);
+  --shadow-sm:0 1px 2px rgba(27,23,48,.06),0 4px 14px -4px rgba(27,23,48,.10);
   --display:"Karantina","Arial Narrow","Heebo",sans-serif;
   --body:"IBM Plex Sans Hebrew","Segoe UI","Arial Hebrew","Arial",sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,"Consolas",monospace;
-  --radius:16px;
-  --maxw:1160px;
+  --radius:20px;
+  --maxw:1180px;
   --gd:to left;
-  --hi:rgba(255,255,255,.7);
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    color-scheme:dark;
-    --bg:#0F1216;--bg-2:#141920;--surface:#171B21;--surface-2:#1D2229;
-    --ink:#EDF0F3;--ink-2:#C9D0D8;--muted:#9BA5B1;--line:#2A3139;--line-2:#222830;
-    --accent:#7196F7;--accent-hover:#8AA9F8;--accent-ink:#0A0F1F;--accent-soft:#1C2744;
-    --ok:#4CC38A;--ok-soft:#15301F;--danger:#F97066;
-    --marker-red:#F0605A;--marker-blue:#7196F7;
-    --bubble-in:#222830;--bubble-out:#2B4A2A;--bubble-out-ink:#EDF0F3;--chat-bg:#12161B;
-    --band:#070A0D;--band-surface:#12161B;--band-line:#232A33;
-    --shadow-lg:0 30px 70px -30px rgba(0,0,0,.8);
-    --shadow-sm:0 1px 2px rgba(0,0,0,.4);
-    --hi:rgba(255,255,255,.04);
-  }
-}
+/* Light theme always (requested); dark only when explicitly set */
 :root[data-theme="dark"]{
   color-scheme:dark;
-  --bg:#0F1216;--bg-2:#141920;--surface:#171B21;--surface-2:#1D2229;
-  --ink:#EDF0F3;--ink-2:#C9D0D8;--muted:#9BA5B1;--line:#2A3139;--line-2:#222830;
-  --accent:#7196F7;--accent-hover:#8AA9F8;--accent-ink:#0A0F1F;--accent-soft:#1C2744;
+  --bg:#110E1C;--bg-2:#171326;--surface:#1D1830;--surface-2:#241E3A;
+  --ink:#F3EFFA;--ink-2:#D6CFE6;--muted:#ADA5C2;--line:#2F2847;--line-2:#262040;
+  --accent:#9C88FF;--accent-hover:#B0A0FF;--accent-ink:#120D24;--accent-soft:#2A2150;
+  --pop:#FF8A5E;--pop-ink:#1F0D05;--pop-soft:#3A2018;
   --ok:#4CC38A;--ok-soft:#15301F;--danger:#F97066;
-  --marker-red:#F0605A;--marker-blue:#7196F7;
-  --bubble-in:#222830;--bubble-out:#2B4A2A;--bubble-out-ink:#EDF0F3;--chat-bg:#12161B;
-  --band:#070A0D;--band-surface:#12161B;--band-line:#232A33;
+  --bubble-in:#2A2342;--bubble-out:#3D2F7A;--bubble-out-ink:#F3EFFA;--chat-bg:#151124;
+  --band:#0A0814;--band-surface:#1A1530;--band-line:#2C2548;
   --shadow-lg:0 30px 70px -30px rgba(0,0,0,.8);
   --shadow-sm:0 1px 2px rgba(0,0,0,.4);
-  --hi:rgba(255,255,255,.04);
 }
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
+[hidden]{display:none!important}
+html{scroll-padding-top:96px}
 body{
-  background:var(--bg);color:var(--ink);font-family:var(--body);
-  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);
+  font-size:19px;line-height:1.7;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;letter-spacing:-.003em;
 }
 #app{overflow-x:clip}
 [dir="ltr"]{--gd:to right}
-.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:20px}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:24px}
 a{color:var(--accent)}
+img{display:block;max-width:100%}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:8px}
 h1,h2,h3{text-wrap:balance;margin:0;font-weight:700}
 p{margin:0;text-wrap:pretty}
 .skip{position:absolute;inset-inline-start:12px;top:-60px;background:var(--accent);color:var(--accent-ink);padding:10px 16px;border-radius:10px;z-index:100;text-decoration:none;font-weight:600}
 .skip:focus{top:12px}
-.display{font-family:var(--display);font-weight:700;letter-spacing:.005em;line-height:.92}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
-.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;border-radius:2px}
-.lead{font-size:clamp(17px,1.6vw,19.5px);line-height:1.6;color:var(--muted);max-width:36em}
+.display{font-family:var(--display);font-weight:700;letter-spacing:.005em;line-height:.95}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--body);font-size:16px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;color:var(--pop)}
+.eyebrow::before{content:"";width:26px;height:2px;background:currentColor;border-radius:2px}
+.lead{font-size:clamp(19px,1.8vw,22px);line-height:1.65;color:var(--muted);max-width:38em}
 .num{direction:ltr;unicode-bidi:isolate;display:inline-block;font-variant-numeric:tabular-nums}
 .shek{font-family:var(--body);font-weight:600;font-size:.5em;vertical-align:.42em;margin-inline-end:.06em}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 svg.i{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 
 /* Buttons */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  font:600 16px/1 var(--body);text-decoration:none;cursor:pointer;white-space:nowrap;
-  padding:15px 24px;border-radius:999px;border:2px solid transparent;
+  font:600 18px/1 var(--body);text-decoration:none;cursor:pointer;white-space:nowrap;
+  padding:17px 28px;border-radius:999px;border:2px solid transparent;
   transition:background-color .18s,border-color .18s,transform .18s,box-shadow .18s;
 }
 .btn .arrow{transition:transform .2s}
 [dir="rtl"] .btn .arrow{transform:scaleX(-1)}
 .btn:hover .arrow{transform:translateX(3px)}
 [dir="rtl"] .btn:hover .arrow{transform:scaleX(-1) translateX(3px)}
-.btn-primary{background:var(--accent);color:var(--accent-ink);box-shadow:0 6px 18px -8px color-mix(in srgb,var(--accent) 70%,transparent)}
-.btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px)}
-.btn-primary:active{transform:none}
+.btn-primary{background:var(--accent);color:var(--accent-ink);box-shadow:0 10px 24px -10px color-mix(in srgb,var(--accent) 75%,transparent);background-image:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,0))}
+.btn-primary:hover{background-color:var(--accent-hover);transform:translateY(-1px)}
+.btn-pop{background:var(--pop);color:var(--pop-ink);box-shadow:0 10px 24px -10px color-mix(in srgb,var(--pop) 80%,transparent)}
+.btn-pop:hover{transform:translateY(-1px);filter:brightness(1.05)}
 .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
 .btn-ghost:hover{border-color:var(--ink)}
-.btn-sm{padding:10px 18px;font-size:14.5px}
+.btn-light{background:rgba(255,255,255,.75);color:var(--ink);border-color:var(--line);backdrop-filter:blur(6px)}
+.btn-light:hover{background:#fff;border-color:var(--ink)}
 .btn[disabled]{opacity:.7;cursor:progress}
 
 /* Header */
 header.top{
-  position:sticky;top:env(safe-area-inset-top,0px);z-index:20;
-  background:color-mix(in srgb,var(--bg) 82%,transparent);
-  backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);
-  border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s;
+  position:sticky;top:0;z-index:20;
+  background:color-mix(in srgb,var(--bg) 86%,transparent);
+  backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);
+  border-bottom:1px solid var(--line-2);
 }
-header.top.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 20px -16px rgba(18,22,27,.35)}
-.nav{display:flex;align-items:center;gap:22px;padding-block:12px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
-.brand .display{font-size:36px;line-height:1}
-.brand small{font-size:12.5px;color:var(--muted);line-height:1.25;border-inline-start:1px solid var(--line);padding-inline-start:10px}
-.navlinks{display:flex;gap:4px;margin-inline-start:auto}
-.navlinks a{color:var(--ink-2);text-decoration:none;font-size:15px;font-weight:500;padding:8px 12px;border-radius:999px;transition:background-color .15s,color .15s}
+.nav{display:flex;align-items:center;gap:20px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand svg{width:48px;height:48px}
+.brand .display{font-size:46px;line-height:1}
+.brand small{font-size:14px;color:var(--muted);line-height:1.25;border-inline-start:1px solid var(--line);padding-inline-start:12px}
+.navlinks{display:flex;gap:6px;margin-inline-start:auto}
+.navlinks a{display:flex;align-items:center;gap:8px;color:var(--ink-2);text-decoration:none;font-size:17px;font-weight:500;padding:10px 16px;border-radius:999px;transition:background-color .15s,color .15s}
+.navlinks a svg.i{width:26px;height:26px}
 .navlinks a:hover{background:var(--bg-2);color:var(--ink)}
 .navlinks a.active{color:var(--accent);background:var(--accent-soft)}
 .lang{
-  font:500 13px var(--mono);background:transparent;color:var(--ink);min-width:44px;
-  border:1px solid var(--line);border-radius:999px;padding:8px 12px;cursor:pointer;transition:border-color .15s;
+  display:flex;align-items:center;gap:8px;
+  font:600 16px var(--mono);background:var(--surface);color:var(--ink);height:52px;
+  border:1.5px solid var(--line);border-radius:999px;padding:0 16px;cursor:pointer;transition:border-color .15s;
 }
+.lang svg.i{width:26px;height:26px}
 .lang:hover{border-color:var(--ink)}
+.nav .btn{padding:15px 24px;font-size:17px}
 
-/* Hero */
-.hero{position:relative;padding-block:64px 88px}
-.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center}
-.hero h1{font-size:clamp(60px,8.6vw,118px);margin-block:18px 22px}
-.hero h1 .clock{
+/* Pages */
+.page[hidden]{display:none}
+.page.enter>*{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+.page.enter>*:nth-child(2){animation-delay:.08s}
+.page.enter>*:nth-child(3){animation-delay:.16s}
+.page.enter>*:nth-child(4){animation-delay:.24s}
+@keyframes rise{from{transform:translateY(18px);opacity:0}to{transform:none;opacity:1}}
+
+/* Intro hero */
+.intro-hero{position:relative;color:var(--ink);min-height:min(86vh,760px);display:grid;align-items:center;grid-template-columns:minmax(0,1fr);padding-block:80px 120px;isolation:isolate;overflow:hidden}
+.intro-hero .bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;animation:zoom 18s ease-out both}
+@keyframes zoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+.intro-hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(var(--gd),rgba(251,247,242,.97) 0%,rgba(251,247,242,.88) 50%,rgba(239,233,255,.35) 100%),linear-gradient(0deg,rgba(251,247,242,.9),transparent 35%)}
+.intro-hero .eyebrow{color:var(--pop)}
+.intro-hero h1{font-size:clamp(68px,10vw,138px);margin-block:20px 24px;max-width:9.5em}
+.intro-hero h1 .clock{
   font-family:var(--mono);font-weight:500;font-size:.4em;letter-spacing:-.01em;
-  background:var(--plate);color:var(--plate-ink);padding:.14em .38em .1em;border-radius:10px;
-  display:inline-block;transform:translateY(-.18em) rotate(-2deg);box-shadow:0 6px 0 -2px color-mix(in srgb,var(--plate) 55%,#000 45%);
+  background:var(--pop);color:#fff;padding:.14em .38em .1em;border-radius:12px;
+  display:inline-block;transform:translateY(-.18em) rotate(-2deg);box-shadow:0 8px 0 -2px color-mix(in srgb,var(--pop) 55%,#000 45%);
 }
-.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-block:30px 22px}
-.assure{display:flex;flex-wrap:wrap;gap:8px 18px;list-style:none;margin:0;padding:0;font-size:14.5px;color:var(--muted)}
-.assure li{display:flex;align-items:center;gap:7px}
-.assure svg.i{width:17px;height:17px;color:var(--ok);stroke-width:2.4}
-.hero-in>*{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
-.hero-in>*:nth-child(2){animation-delay:.06s}.hero-in>*:nth-child(3){animation-delay:.12s}
-.hero-in>*:nth-child(4){animation-delay:.18s}.hero-in>*:nth-child(5){animation-delay:.24s}
-@keyframes rise{from{transform:translateY(14px);opacity:.35}to{transform:none;opacity:1}}
+.intro-hero .lead{color:var(--ink-2);font-size:clamp(20px,2vw,24px)}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.facts{display:flex;flex-wrap:wrap;gap:12px;list-style:none;margin:30px 0 0;padding:0}
+.facts li{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.8);border:1px solid var(--line);padding:8px 16px;border-radius:999px;font-size:16.5px;backdrop-filter:blur(6px)}
+.facts svg.i{width:20px;height:20px;color:var(--ok);stroke-width:2.2}
 
-/* Phone */
-.stage{position:relative;display:grid;place-items:center;padding-block:20px}
-.stage .ring{position:absolute;width:min(560px,120%);aspect-ratio:1;max-width:none;inset-inline-end:-18%;top:50%;transform:translateY(-50%);opacity:.9;pointer-events:none}
-.phone{
-  position:relative;z-index:1;width:100%;max-width:372px;background:var(--ink);border-radius:46px;padding:11px;
-  box-shadow:var(--shadow-lg);
-}
+/* Topic grid */
+.topics-sec{position:relative;margin-top:-70px;padding-bottom:96px}
+.topics-card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow-lg)}
+.topics-head{padding:34px 34px 8px;display:grid;gap:10px}
+.topics-head h2{font-size:clamp(46px,5.6vw,72px)}
+.topics{padding:24px 34px 34px;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:18px;list-style:none;margin:0}
+.topic{position:relative;display:grid;grid-template-rows:150px auto;text-decoration:none;color:var(--ink);background:var(--surface-2);border:1px solid var(--line-2);border-radius:18px;overflow:hidden;transition:transform .22s,box-shadow .22s,border-color .22s}
+.topic:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--line)}
+.topic .ph{position:relative;overflow:hidden}
+.topic .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.topic:hover .ph img{transform:scale(1.06)}
+.topic .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(27,23,48,.55),transparent 60%)}
+.topic .n{position:absolute;z-index:1;bottom:10px;inset-inline-start:14px;font:500 15px var(--mono);color:#fff}
+.topic .tx{padding:16px 18px 20px;display:grid;gap:6px;align-content:start}
+.topic h3{font-size:21px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.topic h3 svg.i{color:var(--accent);transition:transform .2s}
+[dir="rtl"] .topic h3 svg.i{transform:scaleX(-1)}
+.topic:hover h3 svg.i{transform:translateX(3px)}
+[dir="rtl"] .topic:hover h3 svg.i{transform:scaleX(-1) translateX(3px)}
+.topic p{font-size:16.5px;color:var(--muted);line-height:1.5}
+.topic.first{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+
+/* Subject page banner */
+.banner{position:relative;color:var(--ink);isolation:isolate;overflow:hidden;padding-block:72px 64px;min-height:380px;display:grid;align-items:end;grid-template-columns:minmax(0,1fr)}
+.intro-hero>.wrap,.banner>.wrap{width:100%}
+.banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.banner::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(var(--gd),rgba(251,247,242,.97),rgba(251,247,242,.86) 55%,rgba(239,233,255,.3))}
+.banner .eyebrow{color:var(--pop)}
+.banner h2{font-size:clamp(58px,8vw,104px);margin-block:14px 18px;outline:none}
+.banner .lead{color:var(--ink-2)}
+.crumb{display:inline-flex;align-items:center;gap:8px;color:var(--accent);text-decoration:none;font-size:16px;font-weight:500;margin-bottom:22px}
+.crumb:hover{color:var(--accent-hover)}
+[dir="ltr"] .crumb svg{transform:scaleX(-1)}
+.body{padding-block:64px 24px}
+.explain{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;background:var(--accent-soft);border-radius:var(--radius);padding:26px 28px;margin-bottom:48px}
+.explain .ic{width:52px;height:52px;border-radius:16px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center}
+.explain .ic svg.i{width:28px;height:28px}
+.explain h3{font-size:22px;margin-bottom:6px}
+.explain p{color:var(--ink-2);font-size:19px}
+.explain p+p{margin-top:10px}
+
+/* Page footer nav */
+.page-foot{padding-block:40px 96px}
+.page-foot .inner{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:36px}
+.next{display:flex;flex-direction:column;gap:2px;text-decoration:none;color:var(--ink);text-align:end;padding:10px 4px}
+.next small{font-size:15px;font-weight:500;color:var(--muted)}
+.next b{font-size:22px;display:flex;align-items:center;gap:8px;color:var(--accent)}
+[dir="rtl"] .next b svg{transform:scaleX(-1)}
+[dir="rtl"] .back .arrow,[dir="rtl"] .btn:hover .back-ic{transform:none}
+.back-ic{width:22px;height:22px}
+[dir="ltr"] .back-ic{transform:scaleX(-1)}
+
+/* About: phone */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.points{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.points li{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;background:var(--surface);border:1px solid var(--line-2);border-radius:18px;padding:20px 22px;box-shadow:var(--shadow-sm)}
+.points .ic{width:48px;height:48px;border-radius:14px;background:var(--pop-soft);color:var(--pop);display:grid;place-items:center}
+.points b{display:block;font-size:20px;margin-bottom:2px}
+.points span{color:var(--muted);font-size:17.5px}
+.stage{position:relative;display:grid;place-items:center;padding-block:10px}
+.stage .ring{position:absolute;width:min(560px,120%);aspect-ratio:1;inset-inline-end:-14%;top:50%;transform:translateY(-50%);pointer-events:none}
+.phone{position:relative;z-index:1;width:100%;max-width:380px;background:#1B1730;border-radius:46px;padding:11px;box-shadow:var(--shadow-lg)}
 .screen{background:var(--chat-bg);border-radius:36px;overflow:hidden;display:flex;flex-direction:column}
 .status{display:flex;justify-content:space-between;align-items:center;padding:12px 26px 4px;font:600 13px var(--mono);color:var(--ink);direction:ltr}
 .status .icons{display:flex;gap:5px;align-items:center}
@@ -185,18 +240,18 @@ header.top.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 20px -16px 
 .chat-head{display:flex;align-items:center;gap:10px;padding:8px 14px 10px;background:color-mix(in srgb,var(--surface) 92%,transparent);border-bottom:1px solid var(--line-2)}
 .chat-head .back{color:var(--accent);display:grid;place-items:center}
 [dir="rtl"] .chat-head .back svg{transform:scaleX(-1)}
-.avatar{width:40px;height:40px;border-radius:50%;background:#12161B;display:grid;place-items:center;flex:none}
-.chat-head b{display:flex;align-items:center;gap:6px;font-size:15px;line-height:1.2}
+.avatar{width:40px;height:40px;border-radius:50%;background:#1B1730;display:grid;place-items:center;flex:none}
+.chat-head b{display:flex;align-items:center;gap:6px;font-size:15.5px;line-height:1.2}
 .chat-head .bot-tag{font:600 10px var(--mono);letter-spacing:.06em;background:var(--accent-soft);color:var(--accent);padding:2px 6px;border-radius:5px}
-.chat-head .state{font-size:12.5px;color:var(--ok)}
-.chat{padding:14px 12px 10px;display:flex;flex-direction:column;gap:7px;min-height:408px;
+.chat-head .state{font-size:13px;color:var(--ok)}
+.chat{padding:14px 12px 10px;display:flex;flex-direction:column;gap:7px;min-height:430px;
   background-image:radial-gradient(color-mix(in srgb,var(--ink) 7%,transparent) 1px,transparent 1.2px);background-size:16px 16px}
-.day{align-self:center;font:500 11.5px var(--body);color:var(--muted);background:color-mix(in srgb,var(--surface) 70%,transparent);padding:3px 10px;border-radius:999px;margin-bottom:4px}
-.msg{max-width:82%;padding:8px 11px 5px;border-radius:16px;font-size:14.8px;line-height:1.45;box-shadow:0 1px 1px rgba(18,22,27,.08);word-wrap:break-word}
+.day{align-self:center;font:500 12px var(--body);color:var(--muted);background:color-mix(in srgb,var(--surface) 70%,transparent);padding:3px 10px;border-radius:999px;margin-bottom:4px}
+.msg{max-width:84%;padding:8px 12px 5px;border-radius:16px;font-size:15.5px;line-height:1.45;box-shadow:0 1px 1px rgba(27,23,48,.08);word-wrap:break-word}
 .msg .meta{display:flex;justify-content:flex-end;align-items:center;gap:4px;font:400 10.5px var(--mono);color:var(--muted);margin-top:2px;direction:ltr}
 .msg.bot{align-self:flex-start;background:var(--bubble-in);border-start-start-radius:5px}
 .msg.me{align-self:flex-end;background:var(--bubble-out);color:var(--bubble-out-ink);border-start-end-radius:5px}
-.msg.me .meta svg{width:16px;height:11px;color:var(--ok)}
+.msg.me .meta svg{width:16px;height:11px;color:var(--accent)}
 .typing{align-self:flex-start;background:var(--bubble-in);border-radius:16px;border-start-start-radius:5px;padding:12px 14px;display:flex;gap:4px}
 .typing i{width:7px;height:7px;border-radius:50%;background:var(--muted);animation:blink 1.1s infinite}
 .typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
@@ -207,268 +262,224 @@ header.top.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 20px -16px 
 .composer span{flex:1;background:var(--surface);border-radius:999px;padding:9px 14px;font-size:14px;color:var(--muted)}
 .composer i{width:36px;height:36px;border-radius:50%;background:var(--accent);display:grid;place-items:center;color:#fff}
 [dir="rtl"] .composer i svg{transform:scaleX(-1)}
-.toast{
-  position:absolute;z-index:2;inset-inline-start:-6%;bottom:13%;width:250px;
-  background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 14px;box-shadow:var(--shadow-lg);
-  display:grid;grid-template-columns:auto 1fr;gap:4px 10px;align-items:center;
-}
-.toast .dot{grid-row:span 2;width:34px;height:34px;border-radius:10px;background:var(--ok-soft);color:var(--ok);display:grid;place-items:center}
-.toast b{font-size:13.5px;line-height:1.3}
-.toast span{font-size:12.5px;color:var(--muted);line-height:1.35}
+.toast{position:absolute;z-index:2;inset-inline-start:-4%;bottom:12%;width:260px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 14px;box-shadow:var(--shadow-lg);display:grid;grid-template-columns:auto 1fr;gap:4px 10px;align-items:center}
+.toast .dot{grid-row:span 2;width:36px;height:36px;border-radius:10px;background:var(--ok-soft);color:var(--ok);display:grid;place-items:center}
+.toast b{font-size:14px;line-height:1.3}
+.toast span{font-size:13px;color:var(--muted);line-height:1.35}
 .toast.pop{animation-duration:.5s}
 .play{position:relative;z-index:1;display:flex;justify-content:center;margin-top:16px}
-.play button{display:inline-flex;align-items:center;gap:8px;font:500 14px var(--body);color:var(--ink-2);background:var(--surface);border:1px solid var(--line);border-radius:999px;cursor:pointer;padding:8px 16px;transition:border-color .15s}
+.play button{display:inline-flex;align-items:center;gap:8px;font:500 16px var(--body);color:var(--ink-2);background:var(--surface);border:1px solid var(--line);border-radius:999px;cursor:pointer;padding:10px 18px;transition:border-color .15s}
 .play button:hover{border-color:var(--ink)}
-.play svg{width:14px;height:14px;fill:var(--accent)}
-.demo-note{position:relative;z-index:1;text-align:center;font-size:12.5px;color:var(--muted);margin-top:8px}
+.play svg{width:15px;height:15px;fill:var(--accent)}
+.demo-note{position:relative;z-index:1;text-align:center;font-size:14px;color:var(--muted);margin-top:8px}
 
-/* Sections */
-section.block{padding-block:clamp(72px,9vw,112px)}
-section.alt{background:var(--bg-2)}
-.sec-head{display:grid;gap:14px;margin-bottom:44px;max-width:760px}
-.sec-head h2{font-size:clamp(46px,6vw,76px)}
-
-/* Whiteboard */
-.board-wrap{display:grid;grid-template-columns:1.35fr .65fr;gap:28px;align-items:center}
-.board{
-  position:relative;background:#FBFCFD;border-radius:10px;padding:34px 34px 46px;
-  border:10px solid #C9D0D8;box-shadow:inset 0 0 0 1px #E6EAEF,var(--shadow-sm);
-  background-image:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.9) 50%,transparent 60%),radial-gradient(ellipse at 20% 10%,rgba(18,22,27,.035),transparent 60%);
-  color:#12161B;
-}
-.board::after{content:"";position:absolute;inset-inline:18%;bottom:-22px;height:12px;background:#AEB7C1;border-radius:0 0 6px 6px}
-.board ol{list-style:none;margin:0;padding:0;display:grid;gap:4px;counter-reset:q}
-.board li{counter-increment:q;display:flex;gap:16px;align-items:center;font-family:var(--display);font-size:clamp(32px,3.8vw,48px);line-height:1.08;padding-block:4px;border-bottom:1px dashed rgba(18,22,27,.12)}
+/* Problem: whiteboard */
+.board-wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:32px;align-items:center}
+.board{position:relative;background:#FDFDFE;border-radius:10px;padding:28px 30px 32px;border:10px solid #CFC6DA;box-shadow:inset 0 0 0 1px #ECE8F0,var(--shadow-sm);color:#1B1730;
+  background-image:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.9) 50%,transparent 60%),radial-gradient(ellipse at 20% 10%,rgba(27,23,48,.035),transparent 60%)}
+.board::after{content:"";position:absolute;inset-inline:18%;bottom:-22px;height:12px;background:#B3A9C2;border-radius:0 0 6px 6px}
+.board h3{font-size:16px;font-weight:600;color:#6B6480;margin-bottom:10px}
+.board ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:q}
+.board li{counter-increment:q;display:flex;gap:14px;align-items:baseline;font-family:var(--display);font-size:clamp(24px,2.4vw,31px);line-height:1.15;padding-block:7px;border-bottom:1px dashed rgba(27,23,48,.12)}
 .board li:last-child{border-bottom:0}
-.board li::before{content:counter(q);font-family:var(--mono);font-size:13px;color:#6B7480;min-width:1.2em}
-.board li:nth-child(odd) .q{color:#12161B}
-.board li:nth-child(2) .q,.board li:nth-child(5) .q{color:#1D4ED8}
-.board li:nth-child(4) .q{color:#C8322B}
-.board .tally{margin-inline-start:auto;display:flex;gap:10px}
-.board .tally svg{height:26px;width:auto;stroke:#12161B;stroke-width:2.2;stroke-linecap:round;fill:none;opacity:.72}
-.board-sign{position:absolute;inset-inline-end:22px;bottom:12px;font:500 11px var(--mono);color:#8A939E}
-.sticky{
-  background:#F6D55C;color:#241B00;padding:28px 26px 30px;border-radius:3px 3px 3px 22px;
-  box-shadow:0 18px 30px -16px rgba(60,45,0,.55),0 2px 4px rgba(60,45,0,.15);transform:rotate(2.2deg);display:grid;gap:12px;position:relative;
-}
-[dir="ltr"] .sticky{transform:rotate(-2.2deg);border-radius:3px 3px 22px 3px}
+.board li::before{content:counter(q);font-family:var(--mono);font-size:13px;color:#6B6480;min-width:1.2em}
+.board li:nth-child(2),.board li:nth-child(5){color:#5B3CF0}
+.board li:nth-child(4){color:#D2471C}
+.sticky{background:#FFD36B;color:#2B1C00;padding:28px 26px 30px;border-radius:3px 3px 3px 22px;box-shadow:0 18px 30px -16px rgba(60,45,0,.55),0 2px 4px rgba(60,45,0,.15);transform:rotate(2deg);display:grid;gap:12px;position:relative}
+[dir="ltr"] .sticky{transform:rotate(-2deg);border-radius:3px 3px 22px 3px}
 .sticky::before{content:"";position:absolute;top:-12px;inset-inline-start:50%;width:90px;height:24px;transform:translateX(-50%) rotate(-3deg);background:rgba(255,255,255,.55);box-shadow:0 1px 2px rgba(0,0,0,.08)}
 [dir="rtl"] .sticky::before{transform:translateX(50%) rotate(3deg)}
-.sticky strong{font-family:var(--display);font-size:34px;line-height:1}
-.sticky p{font-size:16px;line-height:1.55}
-.sticky .fine{font-size:12.5px;opacity:.72}
+.sticky strong{font-family:var(--display);font-size:36px;line-height:1}
+.sticky p{font-size:18px;line-height:1.55}
 
 /* Steps */
-.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;position:relative;counter-reset:s}
-.steps::before{content:"";position:absolute;top:27px;inset-inline:28px;height:2px;background:repeating-linear-gradient(var(--gd),var(--line) 0 8px,transparent 8px 14px)}
-.steps li{counter-increment:s;position:relative;display:grid;gap:10px;align-content:start}
-.steps .n{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--surface);border:2px solid var(--line);font:500 17px var(--mono);color:var(--ink);box-shadow:0 0 0 8px var(--bg)}
-.steps li:last-child .n{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-.steps h3{font-size:21px;margin-top:8px}
-.steps p{color:var(--muted);font-size:15.5px}
-.steps .time{font:500 12.5px var(--mono);color:var(--accent)}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
+.steps li{position:relative;display:grid;gap:12px;align-content:start;background:var(--surface);border:1px solid var(--line-2);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow-sm)}
+.steps .n{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font:500 19px var(--mono)}
+.steps li:last-child .n{background:var(--pop);color:#fff}
+.steps h3{font-size:24px}
+.steps p{color:var(--muted);font-size:18px}
+.steps .time{font:500 14px var(--mono);color:var(--pop)}
 
 /* Features */
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.feature{background:var(--surface);border:1px solid var(--line-2);border-radius:var(--radius);padding:26px;display:grid;gap:12px;align-content:start;transition:transform .2s,box-shadow .2s,border-color .2s}
-.feature:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm);border-color:var(--line)}
-.feature .ic{width:46px;height:46px;border-radius:13px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
-.feature.soon .ic{background:color-mix(in srgb,var(--plate) 28%,transparent);color:var(--ink)}
-.feature h3{font-size:19px;display:flex;gap:10px;align-items:center;justify-content:space-between}
-.feature p{color:var(--muted);font-size:15.5px}
-.badge{display:inline-flex;align-items:center;gap:6px;font:500 11px var(--mono);letter-spacing:.05em;text-transform:uppercase;padding:4px 9px;border-radius:999px;white-space:nowrap}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feature{background:var(--surface);border:1px solid var(--line-2);border-radius:var(--radius);padding:28px;display:grid;gap:12px;align-content:start;box-shadow:var(--shadow-sm);transition:transform .2s,box-shadow .2s}
+.feature:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.feature .ic{width:54px;height:54px;border-radius:15px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
+.feature .ic svg.i{width:28px;height:28px}
+.feature.soon .ic{background:var(--pop-soft);color:var(--pop)}
+.feature h3{font-size:22px;display:flex;gap:10px;align-items:center;justify-content:space-between}
+.feature p{color:var(--muted);font-size:18px}
+.badge{display:inline-flex;align-items:center;gap:6px;font:500 12px var(--mono);letter-spacing:.05em;text-transform:uppercase;padding:4px 10px;border-radius:999px;white-space:nowrap}
 .badge.live{background:var(--ok-soft);color:var(--ok)}
 .badge.live::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;animation:pulse 2s infinite}
-.badge.soon{background:var(--plate);color:var(--plate-ink)}
+.badge.soon{background:var(--pop);color:#fff}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 
-/* Calculator band */
-section.band{background:var(--band);color:var(--band-ink);position:relative;overflow:hidden}
-section.band .eyebrow{color:var(--plate)}
-section.band .lead{color:var(--band-muted)}
-section.band::before{content:"";position:absolute;width:720px;aspect-ratio:1;border-radius:50%;border:90px solid rgba(113,150,247,.07);inset-inline-start:-260px;top:-300px;pointer-events:none}
-.calc{display:grid;grid-template-columns:1fr 1fr;gap:24px;position:relative}
-.calc-inputs{background:var(--band-surface);border:1px solid var(--band-line);border-radius:20px;padding:30px;display:grid;gap:30px}
+/* Calculator */
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:24px;background:var(--band);color:var(--band-ink);border-radius:32px;padding:28px}
+.calc-inputs{background:var(--band-surface);border:1px solid var(--band-line);border-radius:22px;padding:30px;display:grid;gap:32px}
 .field{display:grid;gap:12px}
-.field label{font-weight:500;font-size:15.5px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;color:var(--band-ink)}
-.field output{font:500 22px var(--mono);color:var(--plate);direction:ltr;unicode-bidi:isolate;font-variant-numeric:tabular-nums;white-space:nowrap}
-.field .scale{display:flex;justify-content:space-between;font:400 12px var(--mono);color:var(--band-muted);margin-top:-4px}
+.field label{font-weight:500;font-size:18px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;color:var(--band-ink)}
+.field output{font:500 24px var(--mono);color:#D9481C;direction:ltr;unicode-bidi:isolate;font-variant-numeric:tabular-nums;white-space:nowrap}
+.field .scale{display:flex;justify-content:space-between;font:400 13px var(--mono);color:var(--band-muted);margin-top:-4px}
 input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:28px;background:transparent;cursor:pointer;margin:0}
-input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:6px;background:linear-gradient(var(--gd),var(--plate) var(--fill,50%),#3A424D var(--fill,50%))}
-input[type=range]::-moz-range-track{height:6px;border-radius:6px;background:linear-gradient(var(--gd),var(--plate) var(--fill,50%),#3A424D var(--fill,50%))}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:#fff;border:5px solid var(--plate);margin-top:-9px;box-shadow:0 2px 8px rgba(0,0,0,.45);transition:transform .15s}
-input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:#fff;border:5px solid var(--plate);box-shadow:0 2px 8px rgba(0,0,0,.45)}
+input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:6px;background:linear-gradient(var(--gd),#FF8A5E var(--fill,50%),#DCD3F5 var(--fill,50%))}
+input[type=range]::-moz-range-track{height:6px;border-radius:6px;background:linear-gradient(var(--gd),#FF8A5E var(--fill,50%),#DCD3F5 var(--fill,50%))}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:#fff;border:5px solid #FF8A5E;margin-top:-10px;box-shadow:0 2px 8px rgba(0,0,0,.45);transition:transform .15s}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#fff;border:5px solid #FF8A5E;box-shadow:0 2px 8px rgba(0,0,0,.45)}
 input[type=range]:active::-webkit-slider-thumb{transform:scale(1.15)}
 input[type=range]:focus-visible{outline:none}
-input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px rgba(242,193,46,.4)}
-.calc-out{background:linear-gradient(160deg,#1E2A4D,#15203D);border:1px solid #2B3A66;border-radius:20px;padding:30px;display:grid;gap:22px;align-content:start}
-.calc-out .label{color:#C3CCE0;font-size:16px}
-.calc-out .big{font-family:var(--display);font-size:clamp(84px,10vw,128px);line-height:.85;color:var(--plate)}
+input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px rgba(255,138,94,.4)}
+.calc-out{background:linear-gradient(160deg,#6E52F7,#5B3CF0);border-radius:22px;padding:30px;display:grid;gap:22px;align-content:start}
+.calc-out .label{color:#D9D1FF;font-size:18px}
+.calc-out .big{font-family:var(--display);font-size:clamp(90px,10vw,134px);line-height:.85;color:#FFD3BF}
 .bars{display:grid;gap:10px}
-.bar-row{display:grid;grid-template-columns:7.5em 1fr;gap:12px;align-items:center;font-size:13.5px;color:#C3CCE0}
-.bar{height:14px;border-radius:4px;background:rgba(255,255,255,.07);overflow:hidden}
+.bar-row{display:grid;grid-template-columns:7.5em 1fr;gap:12px;align-items:center;font-size:15px;color:#D9D1FF}
+.bar{height:14px;border-radius:4px;background:rgba(255,255,255,.1);overflow:hidden}
 .bar i{display:block;height:100%;border-radius:4px;transition:width .35s cubic-bezier(.2,.7,.2,1)}
-.bar .v{background:var(--plate)}
-.bar .c{background:#7196F7}
-.calc-out dl{display:grid;grid-template-columns:1fr auto;gap:12px 16px;margin:0;font-size:15.5px;border-top:1px solid rgba(255,255,255,.1);padding-top:18px}
-.calc-out dt{color:#C3CCE0}
+.bar .v{background:#FF8A5E}
+.bar .c{background:#FFFFFF}
+.calc-out dl{display:grid;grid-template-columns:1fr auto;gap:12px 16px;margin:0;font-size:17px;border-top:1px solid rgba(255,255,255,.15);padding-top:18px}
+.calc-out dt{color:#D9D1FF}
 .calc-out dd{margin:0;font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:end;color:#fff;unicode-bidi:plaintext}
-.calc-out dd.hl{color:var(--plate)}
-.calc-out .note{font-size:12.5px;color:#8E9AB5}
+.calc-out dd.hl{color:#FFB08F}
+.calc-out .note{font-size:14px;color:#B5ADDB}
 
 /* Pricing */
 .pricing{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
-.card-price{background:var(--surface);border:2px solid var(--accent);border-radius:24px;padding:36px 32px 32px;display:grid;gap:22px;position:relative;box-shadow:var(--shadow-lg)}
-.card-price .ribbon{position:absolute;top:-15px;inset-inline-start:28px;background:var(--plate);color:var(--plate-ink);font:600 13.5px var(--body);padding:6px 14px;border-radius:999px;box-shadow:0 4px 0 -1px color-mix(in srgb,var(--plate) 55%,#000 45%)}
+.card-price{background:var(--surface);border:2px solid var(--accent);border-radius:26px;padding:38px 34px 34px;display:grid;gap:22px;box-shadow:var(--shadow-lg)}
 .price{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap}
-.price .display{font-size:112px;line-height:.8}
-.price .per{color:var(--muted);padding-bottom:10px;line-height:1.35}
-.checks{list-style:none;margin:0;padding:22px 0 0;display:grid;gap:12px;border-top:1px solid var(--line-2)}
-.checks li{display:flex;gap:12px;align-items:flex-start}
-.checks li::before{content:"";flex:none;width:20px;height:20px;margin-top:3px;border-radius:50%;
-  background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
-.compare{background:var(--surface);border:1px solid var(--line-2);border-radius:24px;padding:30px;display:grid;gap:22px;align-content:start}
-.compare h3{font-size:19px}
+.price .display{font-size:124px;line-height:.8;color:var(--accent)}
+.price .per{color:var(--muted);padding-bottom:10px;line-height:1.35;font-size:18px}
+.checks{list-style:none;margin:0;padding:22px 0 0;display:grid;gap:14px;border-top:1px solid var(--line-2)}
+.checks li{display:flex;gap:12px;align-items:flex-start;font-size:18.5px}
+.checks li::before{content:"";flex:none;width:22px;height:22px;margin-top:4px;border-radius:50%;
+  background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/15px no-repeat}
+.compare{background:var(--surface);border:1px solid var(--line-2);border-radius:26px;padding:32px;display:grid;gap:22px;align-content:start;box-shadow:var(--shadow-sm)}
+.compare h3{font-size:22px}
 .cmp{display:grid;gap:18px}
 .cmp-row{display:grid;gap:8px}
-.cmp-row .top{display:flex;justify-content:space-between;gap:12px;font-size:15px}
+.cmp-row .top{display:flex;justify-content:space-between;gap:12px;font-size:17px}
 .cmp-row .top b{font-weight:500}
-.cmp-row .top span{font-family:var(--mono);font-size:14px;color:var(--muted);white-space:nowrap}
+.cmp-row .top span{font-family:var(--mono);font-size:15px;color:var(--muted);white-space:nowrap}
 .track{position:relative;height:12px;background:var(--surface-2);border-radius:6px;border:1px solid var(--line-2)}
-.track i{position:absolute;top:-1px;bottom:-1px;border-radius:6px;background:var(--muted);opacity:.55}
+.track i{position:absolute;top:-1px;bottom:-1px;border-radius:6px;background:var(--muted);opacity:.5}
 .track i.hatch{background:repeating-linear-gradient(45deg,var(--line) 0 6px,transparent 6px 11px);opacity:1;inset-inline:0}
 .cmp-row.us .top b{font-weight:700;color:var(--accent)}
 .cmp-row.us .top span{color:var(--accent);font-weight:500}
-.cmp-row.us .track i{background:var(--accent);opacity:1}
-.axis{display:flex;justify-content:space-between;font:400 11.5px var(--mono);color:var(--muted);direction:ltr}
+.cmp-row.us .track i{background:linear-gradient(var(--gd),var(--accent),var(--pop));opacity:1}
+.axis{display:flex;justify-content:space-between;font:400 13px var(--mono);color:var(--muted);direction:ltr}
 [dir="rtl"] .axis{flex-direction:row-reverse}
-.compare .note{font-size:12.5px;color:var(--muted)}
+.compare .note{font-size:14px;color:var(--muted)}
 
 /* FAQ */
-.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:start}
-.faq-grid .sec-head{position:sticky;top:110px;margin-bottom:0}
-.faq{display:grid;gap:10px}
-.faq details{background:var(--surface);border:1px solid var(--line-2);border-radius:14px;transition:border-color .2s,box-shadow .2s}
-.faq details[open]{border-color:var(--line);box-shadow:var(--shadow-sm)}
-.faq summary{cursor:pointer;font-weight:600;font-size:17px;padding:20px 22px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;border-radius:14px}
+.faq{display:grid;gap:12px;max-width:860px}
+.faq details{background:var(--surface);border:1px solid var(--line-2);border-radius:16px;box-shadow:var(--shadow-sm);transition:border-color .2s}
+.faq details[open]{border-color:var(--accent)}
+.faq summary{cursor:pointer;font-weight:600;font-size:20px;padding:22px 24px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;border-radius:16px}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary .pm{flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;transition:transform .25s}
+.faq summary .pm{flex:none;width:32px;height:32px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-size:20px;transition:transform .25s}
 .faq details[open] summary .pm{transform:rotate(45deg)}
-.faq details p{padding:0 22px 22px;color:var(--muted);max-width:40em}
+.faq details p{padding:0 24px 24px;color:var(--muted);max-width:42em;font-size:18.5px}
 
-/* Demo band */
-section.demo-band{background:var(--accent);color:#fff;position:relative;overflow:hidden}
-section.demo-band::after{content:"";position:absolute;width:640px;aspect-ratio:1;border-radius:50%;border:110px solid rgba(255,255,255,.07);inset-inline-end:-240px;bottom:-320px;pointer-events:none}
-.demo{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;position:relative;z-index:1}
-section.demo-band .eyebrow{color:var(--plate)}
-section.demo-band .lead{color:rgba(255,255,255,.82)}
-.demo-points{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:10px;font-size:15.5px;color:rgba(255,255,255,.9)}
+/* Demo form */
+.demo{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}
+.demo-side{position:relative;border-radius:26px;overflow:hidden;min-height:420px;color:#fff;display:grid;align-items:end;isolation:isolate}
+.demo-side img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.demo-side::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(20,14,40,.92),rgba(40,26,96,.35) 70%)}
+.demo-points{list-style:none;margin:0;padding:28px;display:grid;gap:12px;font-size:18px}
 .demo-points li{display:flex;gap:10px;align-items:center}
-.demo-points svg.i{width:18px;height:18px;color:var(--plate);stroke-width:2.4}
-form.card{background:var(--surface);color:var(--ink);border-radius:24px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:18px;box-shadow:0 40px 80px -40px rgba(0,0,0,.55)}
+.demo-points svg.i{width:20px;height:20px;color:#FFB08F;stroke-width:2.4}
+form.card{background:var(--surface);color:var(--ink);border:1px solid var(--line-2);border-radius:26px;padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:18px;box-shadow:var(--shadow-lg)}
 form .full{grid-column:1/-1}
 .fld{display:grid;gap:7px}
-.fld label{font-weight:600;font-size:14.5px}
+.fld label{font-weight:600;font-size:17px}
 .fld .opt{font-weight:400;color:var(--muted)}
 form input,form select,form textarea{
-  font:400 16px var(--body);color:var(--ink);background:var(--surface-2);
-  border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;width:100%;transition:border-color .15s,box-shadow .15s,background-color .15s;
+  font:400 18px var(--body);color:var(--ink);background:var(--surface-2);
+  border:1.5px solid var(--line);border-radius:12px;padding:14px 15px;width:100%;transition:border-color .15s,box-shadow .15s,background-color .15s;
 }
 form input:hover,form select:hover,form textarea:hover{border-color:color-mix(in srgb,var(--ink) 30%,var(--line))}
 form input:focus,form select:focus,form textarea:focus{outline:none;border-color:var(--accent);background:var(--surface);box-shadow:0 0 0 4px var(--accent-soft)}
 form [aria-invalid="true"]{border-color:var(--danger)}
-form select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 6l4 4 4-4' fill='none' stroke='%23525B66' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:16px;background-position:left 14px center;padding-inline-end:40px}
+form select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 6l4 4 4-4' fill='none' stroke='%235F5873' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:16px;background-position:left 14px center;padding-inline-end:40px}
 [dir="ltr"] form select{background-position:right 14px center}
-form textarea{min-height:96px;resize:vertical}
-.hint{font-size:12.5px;color:var(--muted);min-height:1.2em}
+form textarea{min-height:110px;resize:vertical}
+.hint{font-size:14px;color:var(--muted);min-height:1.2em}
 .hint.bad{color:var(--danger);font-weight:500}
 form .submit-row{display:grid;gap:10px}
-form .privacy{font-size:12.5px;color:var(--muted);text-align:center}
+form .privacy{font-size:14px;color:var(--muted);text-align:center}
 .spinner{width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;animation:spin .7s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-.success{background:var(--surface);color:var(--ink);border-radius:24px;padding:40px 32px;display:grid;gap:12px;justify-items:center;text-align:center;box-shadow:0 40px 80px -40px rgba(0,0,0,.55)}
-.success .check{width:64px;height:64px;border-radius:50%;background:var(--ok-soft);color:var(--ok);display:grid;place-items:center}
+.success{background:var(--surface);color:var(--ink);border-radius:26px;padding:44px 32px;display:grid;gap:12px;justify-items:center;text-align:center;box-shadow:var(--shadow-lg)}
+.success .check{width:68px;height:68px;border-radius:50%;background:var(--ok-soft);color:var(--ok);display:grid;place-items:center}
 .success .check path{stroke-dasharray:30;stroke-dashoffset:30;animation:draw .5s .15s ease-out forwards}
 @keyframes draw{to{stroke-dashoffset:0}}
-.success h3{font-size:26px}
+.success h3{font-size:28px}
 .success p{color:var(--muted);max-width:28em}
 .hp{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
-form .send-err{font-size:13.5px;color:var(--danger);font-weight:500;text-align:center}
+form .send-err{font-size:15px;color:var(--danger);font-weight:500;text-align:center}
 
 /* Footer */
-footer.site{padding-block:36px 44px;border-top:1px solid var(--line)}
-footer .row{display:flex;flex-wrap:wrap;gap:16px 28px;justify-content:space-between;align-items:center;color:var(--muted);font-size:14px}
-footer .brand .display{font-size:30px}
-footer nav{display:flex;flex-wrap:wrap;gap:4px 18px}
-footer nav a{color:var(--muted);text-decoration:none}
-footer nav a:hover{color:var(--ink)}
-
-
-/* ===== Premium finish ===== */
-body{letter-spacing:-.003em}
-.hero{background:
-  radial-gradient(900px 480px at 85% -10%,color-mix(in srgb,var(--accent) 10%,transparent),transparent 70%),
-  radial-gradient(700px 420px at 0% 110%,color-mix(in srgb,var(--plate) 10%,transparent),transparent 70%)}
-.hero h1{animation:mask-in 1.1s cubic-bezier(.16,1,.3,1) both}
-@keyframes mask-in{from{clip-path:inset(0 0 100% 0);transform:translateY(18%)}to{clip-path:inset(-20% -5% -25% -5%);transform:none}}
-section.band,section.demo-band{margin-inline:clamp(8px,1.6vw,24px);border-radius:clamp(26px,3.4vw,44px);isolation:isolate}
-section.band::after,section.demo-band::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:0;opacity:.22;mix-blend-mode:overlay;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-section.band>.wrap,section.demo-band>.wrap{position:relative;z-index:1}
-section.alt{background:linear-gradient(180deg,var(--bg) 0,var(--bg-2) 90px,var(--bg-2) calc(100% - 90px),var(--bg) 100%)}
-.sec-head h2{letter-spacing:-.005em}
-.feature,.faq details,.compare,.card-price{box-shadow:inset 0 1px 0 var(--hi),var(--shadow-sm)}
-.btn-primary{background-image:linear-gradient(180deg,rgba(255,255,255,.14),rgba(255,255,255,0))}
-
-/* Scroll transitions: section titles and content ease in as they enter */
-.rv{opacity:0;transform:translateY(34px);transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1s cubic-bezier(.16,1,.3,1);transition-delay:var(--d,0s)}
-.rv.in{opacity:1;transform:none}
-.rv-h{clip-path:inset(0 0 100% 0);transform:translateY(40%);transition:clip-path 1.1s cubic-bezier(.16,1,.3,1),transform 1.1s cubic-bezier(.16,1,.3,1);transition-delay:var(--d,0s)}
-.rv-h.in{clip-path:inset(-20% -5% -25% -5%);transform:none}
-.sec-head .eyebrow::before{transition:width .9s .1s cubic-bezier(.16,1,.3,1)}
-.sec-head.pre .eyebrow::before{width:0}
+footer.site{padding-block:36px 44px;border-top:1px solid var(--line);background:var(--bg-2)}
+footer .row{display:flex;flex-wrap:wrap;gap:16px 28px;justify-content:space-between;align-items:center;color:var(--muted);font-size:15.5px}
+footer .brand svg{width:36px;height:36px}
+footer .brand .display{font-size:34px}
+footer .credit{font-size:13px}
 
 /* Responsive */
-@media (max-width:1000px){
-  .hero-grid,.calc,.pricing,.demo,.board-wrap,.faq-grid{grid-template-columns:1fr}
-  .faq-grid .sec-head{position:static;margin-bottom:8px}
-  .stage{margin-top:12px}
-  .steps{grid-template-columns:1fr;row-gap:28px}
-  .steps::before{display:none}
-  .steps li{grid-template-columns:56px 1fr;column-gap:16px}
-  .steps li>*:not(.n){grid-column:2}
-  .steps .n{grid-row:span 3}
-  .features{grid-template-columns:1fr 1fr}
-  .navlinks{display:none}
-  .nav .lang{margin-inline-start:auto}
-  .sticky,[dir="ltr"] .sticky{transform:rotate(0);max-width:520px}
-  .demo{gap:36px}
+@media (max-width:1060px){
+  .topics{grid-template-columns:repeat(2,1fr)}
+  .about-grid,.calc,.pricing,.demo,.board-wrap{grid-template-columns:1fr}
+  .steps,.features{grid-template-columns:1fr 1fr}
+  .navlinks a span{display:none}
+  .navlinks a{padding:10px}
+  .sticky,[dir="ltr"] .sticky{transform:rotate(0);max-width:560px}
+  .demo-side{min-height:300px}
 }
-@media (max-width:620px){
-  body{font-size:16px}
+@media (max-width:720px){
+  body{font-size:17.5px}
   .wrap{padding-inline:16px}
-  .hero{padding-block:36px 64px}
-  .hero h1{font-size:clamp(56px,16vw,76px)}
-  .steps,.features{grid-template-columns:1fr}
-  .steps{row-gap:26px}
-  .steps li{grid-template-columns:56px 1fr;column-gap:16px}
-  .steps li>*:not(.n){grid-column:2}
-  .steps .n{grid-row:span 3}
-  .steps h3{margin-top:4px}
-  form.card{grid-template-columns:1fr;padding:22px}
   .brand small{display:none}
-  .board{padding:22px 18px 38px;border-width:8px}
-  .board .tally{display:none}
+  .brand svg{width:42px;height:42px}
+  .brand .display{font-size:40px}
+  .nav{gap:8px}
+  .navlinks{gap:0}
+  .navlinks a:not(.home){display:none}
+  .lang{height:48px;padding:0 12px}
+  .nav .btn{padding:13px 16px;font-size:16px}
+  .nav .btn .arrow{display:none}
+  .intro-hero{padding-block:48px 110px;min-height:0}
+  .intro-hero h1{font-size:clamp(60px,17vw,84px)}
+  .cta-row .btn{flex:1 1 100%}
+  .topics-head{padding:26px 18px 4px}
+  .topics{grid-template-columns:1fr;padding:18px}
+  .topic{grid-template-rows:auto;grid-template-columns:120px 1fr}
+  .topic .ph{min-height:110px}
+  .topic .tx{padding:14px 16px}
+  .topic h3{font-size:19px}
+  .topic p{font-size:15.5px}
+  .banner{padding-block:44px 40px;min-height:300px}
+  .body{padding-block:40px 16px}
+  .explain{grid-template-columns:1fr;padding:22px}
+  .steps,.features{grid-template-columns:1fr}
+  .calc{padding:14px;border-radius:24px}
+  .calc-inputs,.calc-out{padding:22px}
+  form.card{grid-template-columns:1fr;padding:22px}
+  .board{padding:20px 18px 26px;border-width:8px}
   .toast{position:relative;inset:auto;width:auto;max-width:340px;margin:-34px auto 0}
   .stage .ring{inset-inline-end:-40%;width:130%}
-  .price .display{font-size:92px}
+  .price .display{font-size:100px}
   .card-price,.compare{padding:28px 22px}
-  .calc-inputs,.calc-out{padding:24px}
-  .cta-row .btn{flex:1 1 100%}
-  .nav{gap:10px}
+  .page-foot .inner{flex-direction:column-reverse;align-items:stretch}
+  .page-foot .btn{width:100%}
+  .next{text-align:start}
+}
+@media (max-width:420px){
+  .nav .btn{display:none}
 }
 @media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
 </style>
@@ -478,13 +489,18 @@ section.alt{background:linear-gradient(180deg,var(--bg) 0,var(--bg-2) 90px,var(-
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3.5 11L12 4l8.5 7"/><path d="M6 9.5V20h12V9.5"/><path d="M10 20v-5.5h4V20"/></symbol>
   <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
-  <symbol id="i-lang" viewBox="0 0 24 24"><path d="M3 5h9M7.5 3v2c0 4-2.5 7-5 8"/><path d="M5 9c1 2 3.5 4 6 4.5"/><path d="M13 21l4-10 4 10M14.5 17.5h5"/></symbol>
+  <symbol id="i-lang" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></symbol>
   <symbol id="i-list" viewBox="0 0 24 24"><rect x="4" y="3.5" width="16" height="17" rx="2.5"/><path d="M8 8.5h8M8 12.5h8M8 16.5h5"/></symbol>
   <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 1112 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 004 0"/></symbol>
   <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M7 16v-4M12 16V8M17 16v-7"/></symbol>
   <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M9 14.5l2 2 4-4"/></symbol>
   <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"/><path d="M5 20c1-3.5 3.8-5.5 7-5.5s6 2 7 5.5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5.5h16v11H9l-5 4z"/><path d="M8 10h8M8 13h5"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3.5 12.5V4h8.5l8.5 8.5-8.5 8.5z"/><circle cx="8" cy="8.5" r="1.5"/></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 114 2c-1 .6-1.5 1.2-1.5 2.3"/><path d="M12 17h.01"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5h.01"/></symbol>
   <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></symbol>
 </svg>
 
@@ -493,112 +509,179 @@ section.alt{background:linear-gradient(180deg,var(--bg) 0,var(--bg-2) 90px,var(-
 
 <header class="top" id="header">
   <nav class="nav wrap" aria-label="ראשי" data-i18n-aria="navAria">
-    <a class="brand" href="#main" aria-label="AGS">
-      <svg width="36" height="36" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="13" fill="none" stroke="var(--accent)" stroke-width="6"/><circle cx="17" cy="17" r="4" fill="var(--plate)"/></svg>
+    <a class="brand" href="#" aria-label="AGS">
+      <svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="13" fill="none" stroke="var(--accent)" stroke-width="6"/><circle cx="17" cy="17" r="4" fill="var(--pop)"/></svg>
       <span class="display">AGS</span>
       <small data-i18n="brandSub">עוזר AI<br>לחדרי כושר</small>
     </a>
     <div class="navlinks">
-      <a href="#how" data-i18n="navHow">איך זה עובד</a>
-      <a href="#calc" data-i18n="navCalc">מחשבון</a>
-      <a href="#price" data-i18n="navPrice">מחיר</a>
-      <a href="#faq" data-i18n="navFaq">שאלות</a>
+      <a href="#" class="home" data-route=""><svg class="i" aria-hidden="true"><use href="#i-home"/></svg><span data-i18n="navHome">ראשי</span></a>
+      <a href="#about" data-route="about"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><span data-i18n="navAbout">מה זה AGS</span></a>
+      <a href="#price" data-route="price"><svg class="i" aria-hidden="true"><use href="#i-tag"/></svg><span data-i18n="navPrice">מחיר</span></a>
+      <a href="#faq" data-route="faq"><svg class="i" aria-hidden="true"><use href="#i-help"/></svg><span data-i18n="navFaq">שאלות</span></a>
     </div>
-    <button class="lang" id="langBtn" type="button" lang="en" aria-label="Switch to English">EN</button>
-    <a class="btn btn-primary btn-sm" href="#demo" data-i18n="navCta">קבעו הדגמה</a>
+    <button class="lang" id="langBtn" type="button" lang="en" aria-label="Switch to English"><svg class="i" aria-hidden="true"><use href="#i-lang"/></svg><span id="langTxt">EN</span></button>
+    <a class="btn btn-pop" href="#demo"><span data-i18n="navCta">קבעו הדגמה</span><svg class="i arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
   </nav>
 </header>
 
 <main id="main">
-  <!-- Hero -->
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="hero-in">
+
+  <!-- ===== Intro ===== -->
+  <div class="page" data-page="">
+    <section class="intro-hero">
+      <img class="bgimg" src="img/hero.jpg" alt="" fetchpriority="high">
+      <div class="wrap">
         <p class="eyebrow" data-i18n="heroEyebrow">לחדרי כושר, קרוספיט, פילאטיס ויוגה</p>
         <h1 class="display" data-i18n="heroTitle">כל הודעה נענית. גם ב־<span class="clock num">23:47</span></h1>
-        <p class="lead" data-i18n="heroLead">AGS עונה ללקוחות שלכם מסביב לשעון על מחירים, שעות ושיעור ניסיון. הוא שומר כל מתעניין ברשימת לידים ושולח תזכורת למי שלא חזר. אתם ממשיכים לאמן.</p>
+        <p class="lead" data-i18n="heroLead">AGS הוא עוזר AI שעונה ללקוחות של המכון שלכם על מחירים, שעות ושיעור ניסיון, שומר את הפרטים של כל מי שמתעניין ושולח תזכורת למי שלא חזר. אתם ממשיכים לאמן.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="#demo"><span data-i18n="heroCta">קבעו הדגמה של 10 דקות</span><svg class="i arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          <a class="btn btn-ghost" href="#how" data-i18n="heroCta2">איך זה עובד</a>
+          <a class="btn btn-pop" href="#about"><span data-i18n="heroCta">מה זה AGS? בואו נתחיל</span><svg class="i arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-light" href="#topics" data-i18n="heroCta2">כל הנושאים</a>
         </div>
+        <ul class="facts">
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="fact1">₪549 לחודש + מע״מ</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="fact2">מוכן תוך 3 ימי עסקים</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="fact3">עונה בעברית ובאנגלית</span></li>
+        </ul>
       </div>
+    </section>
 
-      <div>
-        <div class="stage">
-          <svg class="ring" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="78" fill="none" stroke="var(--accent)" stroke-width="30" opacity=".13"/><circle cx="100" cy="100" r="22" fill="var(--plate)" opacity=".5"/></svg>
-          <div class="phone" role="img" aria-label="שיחה לדוגמה בין לקוחה לבוט של חדר כושר" data-i18n-aria="phoneAria">
-            <div class="screen">
-              <div class="status" aria-hidden="true"><span>23:49</span><span class="icons"><i style="width:3px;height:6px"></i><i style="width:3px;height:8px"></i><i style="width:3px;height:10px"></i><i style="width:22px;height:11px;border-radius:3px"></i></span></div>
-              <div class="chat-head" aria-hidden="true">
-                <span class="back"><svg class="i" style="width:22px;height:22px;stroke-width:2.2"><path d="M15 5l-7 7 7 7"/></svg></span>
-                <div class="avatar"><svg width="22" height="22" viewBox="0 0 34 34"><circle cx="17" cy="17" r="12" fill="none" stroke="#fff" stroke-width="6"/><circle cx="17" cy="17" r="4" fill="#F2C12E"/></svg></div>
-                <div><b>Iron House Gym <span class="bot-tag">BOT</span></b><span class="state" data-i18n="chatOnline">עונה עכשיו</span></div>
+    <section class="topics-sec" id="topics">
+      <div class="wrap"><div class="topics-card">
+        <div class="topics-head">
+          <p class="eyebrow" data-i18n="topicsEyebrow">בחרו נושא</p>
+          <h2 class="display" data-i18n="topicsTitle">כל מה שצריך לדעת על AGS</h2>
+          <p class="lead" data-i18n="topicsLead">כל נושא בעמוד משלו, עם הסבר קצר. בסוף כל עמוד יש כפתור שמחזיר לכאן.</p>
+        </div>
+        <ul class="topics" id="topicGrid"></ul>
+      </div></div>
+    </section>
+  </div>
+
+  <!-- ===== About ===== -->
+  <div class="page" data-page="about" hidden>
+    <section class="banner"><img src="img/about.jpg" alt="" loading="lazy">
+      <div class="wrap">
+        <a class="crumb" href="#"><svg class="i" aria-hidden="true"><use href="#i-home"/></svg><span data-i18n="crumb">עמוד ראשי</span></a>
+        <p class="eyebrow tnum"></p>
+        <h2 class="display" tabindex="-1" data-i18n="aboutTitle">מה זה AGS?</h2>
+        <p class="lead" data-i18n="aboutLead">עוזר AI שעונה ללקוחות של המכון במקומכם, בכל שעה.</p>
+      </div>
+    </section>
+    <div class="wrap body">
+      <div class="explain"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg></span><div>
+        <p data-i18n="aboutX1">לקוח שולח הודעה עם שאלה. AGS עונה לו תוך שניות, רק לפי המידע שנתתם: מחירים, שעות פתיחה, שיעור ניסיון ומה שעוד חשוב לכם.</p>
+        <p data-i18n="aboutX2">כשמישהו מתעניין, AGS שומר את השם, הטלפון ומה הוא ביקש ברשימת לידים שלכם, כדי שתוכלו לחזור אליו. היום AGS עובד בטלגרם, ווואטסאפ בדרך.</p>
+      </div></div>
+      <div class="about-grid">
+        <ul class="points">
+          <li><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg></span><div><b data-i18n="ap1t">עונה במקומכם</b><span data-i18n="ap1p">כל הודעה מקבלת תשובה, גם כשאתם באמצע אימון.</span></div></li>
+          <li><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-list"/></svg></span><div><b data-i18n="ap2t">שומר כל מתעניין</b><span data-i18n="ap2p">שם, טלפון ומה ביקש, ברשימה אחת.</span></div></li>
+          <li><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-bell"/></svg></span><div><b data-i18n="ap3t">מזכיר למי שלא חזר</b><span data-i18n="ap3p">הודעת תזכורת אחת, בלי הצפה.</span></div></li>
+          <li><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg></span><div><b data-i18n="ap4t">מעדכן אתכם כל שבוע</b><span data-i18n="ap4p">דו״ח עם הלידים והשיחות של השבוע.</span></div></li>
+        </ul>
+        <div>
+          <div class="stage">
+            <svg class="ring" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="78" fill="none" stroke="var(--accent)" stroke-width="30" opacity=".13"/><circle cx="100" cy="100" r="22" fill="var(--pop)" opacity=".45"/></svg>
+            <div class="phone" role="img" aria-label="שיחה לדוגמה בין לקוחה לבוט של חדר כושר" data-i18n-aria="phoneAria">
+              <div class="screen">
+                <div class="status" aria-hidden="true"><span>23:49</span><span class="icons"><i style="width:3px;height:6px"></i><i style="width:3px;height:8px"></i><i style="width:3px;height:10px"></i><i style="width:22px;height:11px;border-radius:3px"></i></span></div>
+                <div class="chat-head" aria-hidden="true">
+                  <span class="back"><svg class="i" style="width:22px;height:22px;stroke-width:2.2"><path d="M15 5l-7 7 7 7"/></svg></span>
+                  <div class="avatar"><svg width="22" height="22" viewBox="0 0 34 34"><circle cx="17" cy="17" r="12" fill="none" stroke="#fff" stroke-width="6"/><circle cx="17" cy="17" r="4" fill="#FF6B3D"/></svg></div>
+                  <div><b>Iron House Gym <span class="bot-tag">BOT</span></b><span class="state" data-i18n="chatOnline">עונה עכשיו</span></div>
+                </div>
+                <div class="chat" id="chat" aria-hidden="true"></div>
+                <div class="composer" aria-hidden="true"><span data-i18n="chatInput">הודעה</span><i><svg class="i" style="width:18px;height:18px;stroke-width:2.2"><path d="M4 12h15M13 6l6 6-6 6"/></svg></i></div>
               </div>
-              <div class="chat" id="chat" aria-hidden="true"></div>
-              <div class="composer" aria-hidden="true"><span data-i18n="chatInput">הודעה</span><i><svg class="i" style="width:18px;height:18px;stroke-width:2.2"><path d="M4 12h15M13 6l6 6-6 6"/></svg></i></div>
+            </div>
+            <div class="toast" id="toast" aria-hidden="true">
+              <span class="dot"><svg class="i" style="width:18px;height:18px"><use href="#i-user"/></svg></span>
+              <b data-i18n="toastT">ליד חדש נשמר ברשימה</b>
+              <span data-i18n="toastD">דנה · שיעור ניסיון · מחר בערב</span>
             </div>
           </div>
-          <div class="toast" id="toast" aria-hidden="true">
-            <span class="dot"><svg class="i" style="width:18px;height:18px"><use href="#i-user"/></svg></span>
-            <b data-i18n="toastT">ליד חדש נשמר ברשימה</b>
-            <span data-i18n="toastD">דנה · שיעור ניסיון · מחר בערב</span>
-          </div>
+          <div class="play"><button type="button" id="replayBtn"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-play"/></svg><span data-i18n="chatReplay">צפו בשיחה שוב</span></button></div>
+          <p class="demo-note" data-i18n="chatDemo">שיחה לדוגמה עם חדר כושר לדוגמה. המחירים להמחשה.</p>
         </div>
-        <div class="play"><button type="button" id="replayBtn"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-play"/></svg><span data-i18n="chatReplay">צפו בשיחה בזמן אמת</span></button></div>
-        <p class="demo-note" data-i18n="chatDemo">שיחה לדוגמה עם חדר כושר לדוגמה. המחירים להמחשה.</p>
       </div>
     </div>
-  </section>
+    <div class="wrap page-foot"><div class="inner"></div></div>
+  </div>
 
-  <!-- Problem / whiteboard -->
-  <section class="block alt" id="problem">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow" data-i18n="probEyebrow">הבעיה</p>
-        <h2 class="display" data-i18n="probTitle">5 השאלות שאתם עונים עליהן כל יום</h2>
-        <p class="lead" data-i18n="probLead">רוב הפניות מגיעות בערב ובסופ״ש, כשאתם באמצע אימון או כבר בבית. מי שלא מקבל תשובה מהר, נרשם למכון אחר.</p>
+  <!-- ===== Problem ===== -->
+  <div class="page" data-page="problem" hidden>
+    <section class="banner"><img src="img/problem.jpg" alt="" loading="lazy">
+      <div class="wrap">
+        <a class="crumb" href="#"><svg class="i" aria-hidden="true"><use href="#i-home"/></svg><span data-i18n="crumb">עמוד ראשי</span></a>
+        <p class="eyebrow tnum"></p>
+        <h2 class="display" tabindex="-1" data-i18n="probTitle">הבעיה: פניות שנשארות בלי תשובה</h2>
+        <p class="lead" data-i18n="probLead">הרבה פניות מתפספסות כי הן מגיעות כשאין מענה טלפוני.</p>
       </div>
+    </section>
+    <div class="wrap body">
+      <div class="explain"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg></span><div>
+        <p data-i18n="probX1">כשאתם מאמנים, מעבירים שיעור או כבר סגרתם את המכון, אין מי שיענה לטלפון או להודעות. לקוח שמחכה לתשובה יכול בינתיים לפנות למקום אחר.</p>
+        <p data-i18n="probX2">ורוב השאלות חוזרות על עצמן. אלה דוגמאות לשאלות שלקוחות שולחים למכונים:</p>
+      </div></div>
       <div class="board-wrap">
         <div class="board">
+          <h3 data-i18n="boardH">שאלות שחוזרות על עצמן</h3>
           <ol>
-            <li><span class="q" data-i18n="q1">כמה עולה מנוי?</span><span class="tally" data-t="12"></span></li>
-            <li><span class="q" data-i18n="q2">מה שעות הפתיחה?</span><span class="tally" data-t="9"></span></li>
-            <li><span class="q" data-i18n="q3">יש שיעור ניסיון?</span><span class="tally" data-t="8"></span></li>
-            <li><span class="q" data-i18n="q4">איפה חונים?</span><span class="tally" data-t="6"></span></li>
-            <li><span class="q" data-i18n="q5">מה להביא לאימון ראשון?</span><span class="tally" data-t="4"></span></li>
+            <li data-i18n="q1">כמה עולה מנוי?</li>
+            <li data-i18n="q2">מה שעות הפתיחה?</li>
+            <li data-i18n="q3">יש שיעור ניסיון?</li>
+            <li data-i18n="q4">איפה חונים?</li>
+            <li data-i18n="q5">מה להביא לאימון ראשון?</li>
           </ol>
-          <span class="board-sign" data-i18n="boardFine">הסימונים להמחשה, לא נתונים אמיתיים</span>
         </div>
         <aside class="sticky">
           <strong data-i18n="boardTitle">AGS לומד את התשובות שלכם פעם אחת</strong>
-          <p data-i18n="boardText">ועונה עליהן בלי סוף, תוך שניות, בעברית או באנגלית לפי השפה שבה הלקוח כתב. הוא עונה רק לפי המידע שנתתם לו ולא ממציא מחירים.</p>
+          <p data-i18n="boardText">ועונה עליהן בכל שעה, תוך שניות, בעברית או באנגלית לפי השפה שבה הלקוח כתב. הוא עונה רק לפי המידע שנתתם לו ולא ממציא מחירים.</p>
         </aside>
       </div>
     </div>
-  </section>
+    <div class="wrap page-foot"><div class="inner"></div></div>
+  </div>
 
-  <!-- How it works -->
-  <section class="block" id="how">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow" data-i18n="howEyebrow">איך זה עובד</p>
-        <h2 class="display" data-i18n="howTitle">מוכן תוך שלושה ימי עסקים. אתם לא נוגעים בשום דבר טכני.</h2>
+  <!-- ===== How ===== -->
+  <div class="page" data-page="how" hidden>
+    <section class="banner"><img src="img/how.jpg" alt="" loading="lazy">
+      <div class="wrap">
+        <a class="crumb" href="#"><svg class="i" aria-hidden="true"><use href="#i-home"/></svg><span data-i18n="crumb">עמוד ראשי</span></a>
+        <p class="eyebrow tnum"></p>
+        <h2 class="display" tabindex="-1" data-i18n="howTitle">איך זה עובד</h2>
+        <p class="lead" data-i18n="howLead">שלושה שלבים. אתם לא נוגעים בשום דבר טכני.</p>
       </div>
+    </section>
+    <div class="wrap body">
+      <div class="explain"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg></span><div>
+        <p data-i18n="howX">אתם נותנים לנו את פרטי המכון: מחירים, שעות, שיעורים וכל מה שלקוחות שואלים. אנחנו מקימים את AGS עם המידע הזה, ומשם הוא עונה ללקוחות לבד. כשמשהו משתנה, אנחנו מעדכנים.</p>
+      </div></div>
       <ol class="steps">
-        <li><span class="n num">01</span><span class="time" data-i18n="s2m">תוך 3 ימי עסקים</span><h3 data-i18n="s2t">אנחנו מקימים</h3><p data-i18n="s2p">AGS מוכן עם הפרטים של העסק שלכם ובסגנון הדיבור שלכם.</p></li>
-        <li><span class="n num">02</span><span class="time" data-i18n="s3m">24/7</span><h3 data-i18n="s3t">AGS עונה</h3><p data-i18n="s3p">כל הודעה נענית תוך שניות, גם בלילה ובסופי שבוע.</p></li>
-        <li><span class="n num">03</span><span class="time" data-i18n="s4m">כל שבוע</span><h3 data-i18n="s4t">אתם מקבלים לידים</h3><p data-i18n="s4p">כל מתעניין נשמר ברשימה ומקבל תזכורת אם לא חזר, ובסוף השבוע מגיע אליכם דו״ח.</p></li>
+        <li><span class="n num">01</span><span class="time" data-i18n="s1m">תוך 3 ימי עסקים</span><h3 data-i18n="s1t">אנחנו מקימים</h3><p data-i18n="s1p">AGS מוכן עם הפרטים של העסק שלכם ובסגנון הדיבור שלכם.</p></li>
+        <li><span class="n num">02</span><span class="time" data-i18n="s2m">24/7</span><h3 data-i18n="s2t">AGS עונה</h3><p data-i18n="s2p">כל הודעה נענית תוך שניות, גם בלילה ובסופי שבוע.</p></li>
+        <li><span class="n num">03</span><span class="time" data-i18n="s3m">כל שבוע</span><h3 data-i18n="s3t">אתם מקבלים לידים</h3><p data-i18n="s3p">כל מתעניין נשמר ברשימה ומקבל תזכורת אם לא חזר, ובסוף השבוע מגיע אליכם דו״ח.</p></li>
       </ol>
     </div>
-  </section>
+    <div class="wrap page-foot"><div class="inner"></div></div>
+  </div>
 
-  <!-- Features -->
-  <section class="block alt" id="features">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow" data-i18n="featEyebrow">מה מקבלים</p>
-        <h2 class="display" data-i18n="featTitle">דלפק קבלה שלא הולך הביתה</h2>
+  <!-- ===== Features ===== -->
+  <div class="page" data-page="features" hidden>
+    <section class="banner"><img src="img/features.jpg" alt="" loading="lazy">
+      <div class="wrap">
+        <a class="crumb" href="#"><svg class="i" aria-hidden="true"><use href="#i-home"/></svg><span data-i18n="crumb">עמוד ראשי</span></a>
+        <p class="eyebrow tnum"></p>
+        <h2 class="display" tabindex="-1" data-i18n="featTitle">אז על מה אתה משלם?</h2>
+        <p class="lead" data-i18n="featLead">דלפק קבלה שלא הולך הביתה.</p>
       </div>
+    </section>
+    <div class="wrap body">
+      <div class="explain"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg></span><div>
+        <p data-i18n="featX">אלה הדברים ש־AGS עושה. מה שמסומן ״פעיל״ עובד כבר היום. מה שמסומן ״בקרוב״ עוד בפיתוח.</p>
+      </div></div>
       <div class="features">
         <div class="feature"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg></span><h3><span data-i18n="f1t">מענה 24/7</span><span class="badge live" data-i18n="live">פעיל</span></h3><p data-i18n="f1p">תשובה תוך שניות על מחירים, שעות, שיעורים וחניה, בכל שעה.</p></div>
         <div class="feature"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-lang"/></svg></span><h3><span data-i18n="f2t">עברית ואנגלית</span><span class="badge live" data-i18n="live">פעיל</span></h3><p data-i18n="f2p">עונה בשפה שבה הלקוח כתב, בלי לערבב שפות.</p></div>
@@ -608,16 +691,24 @@ section.alt{background:linear-gradient(180deg,var(--bg) 0,var(--bg-2) 90px,var(-
         <div class="feature soon"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-cal"/></svg></span><h3><span data-i18n="f6t">וואטסאפ וקביעת אימונים</span><span class="badge soon" data-i18n="soon">בקרוב</span></h3><p data-i18n="f6p">היום AGS עובד בטלגרם. בקרוב: וואטסאפ וקביעת אימונים ישר ביומן של המאמן.</p></div>
       </div>
     </div>
-  </section>
+    <div class="wrap page-foot"><div class="inner"></div></div>
+  </div>
 
-  <!-- Calculator -->
-  <section class="block band" id="calc">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow" data-i18n="calcEyebrow">מחשבון החזר</p>
-        <h2 class="display" data-i18n="calcTitle">כמה שווה לכם מנוי אחד שלא הלך לאיבוד?</h2>
+  <!-- ===== Calculator ===== -->
+  <div class="page" data-page="calc" hidden>
+    <section class="banner"><img src="img/calc.jpg" alt="" loading="lazy">
+      <div class="wrap">
+        <a class="crumb" href="#"><svg class="i" aria-hidden="true"><use href="#i-home"/></svg><span data-i18n="crumb">עמוד ראשי</span></a>
+        <p class="eyebrow tnum"></p>
+        <h2 class="display" tabindex="-1" data-i18n="calcTitle">מחשבון: כמה שווה מנוי אחד?</h2>
         <p class="lead" data-i18n="calcLead">הזיזו את הסמנים לפי המספרים של המכון שלכם.</p>
       </div>
+    </section>
+    <div class="wrap body">
+      <div class="explain"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg></span><div>
+        <h3 data-i18n="explainHow">איך מחשבים</h3>
+        <p data-i18n="calcX">מנוי חדש שווה את המחיר החודשי כפול מספר החודשים שהוא נשאר. מכפילים את זה במספר המנויים הנוספים בחודש ומשווים לעלות של AGS. כל המספרים כאן הם שלכם, אנחנו לא מניחים כמה מנויים תרוויחו.</p>
+      </div></div>
       <div class="calc">
         <div class="calc-inputs">
           <div class="field">
@@ -653,15 +744,23 @@ section.alt{background:linear-gradient(180deg,var(--bg) 0,var(--bg-2) 90px,var(-
         </div>
       </div>
     </div>
-  </section>
+    <div class="wrap page-foot"><div class="inner"></div></div>
+  </div>
 
-  <!-- Pricing -->
-  <section class="block" id="price">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow" data-i18n="priceEyebrow">מחיר</p>
-        <h2 class="display" data-i18n="priceTitle">מחיר אחד. הכול כלול.</h2>
+  <!-- ===== Pricing ===== -->
+  <div class="page" data-page="price" hidden>
+    <section class="banner"><img src="img/price.jpg" alt="" loading="lazy">
+      <div class="wrap">
+        <a class="crumb" href="#"><svg class="i" aria-hidden="true"><use href="#i-home"/></svg><span data-i18n="crumb">עמוד ראשי</span></a>
+        <p class="eyebrow tnum"></p>
+        <h2 class="display" tabindex="-1" data-i18n="priceTitle">מחיר אחד. הכול כלול.</h2>
+        <p class="lead" data-i18n="priceLead">₪549 לחודש + מע״מ.</p>
       </div>
+    </section>
+    <div class="wrap body">
+      <div class="explain"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg></span><div>
+        <p data-i18n="priceX">יש מחיר אחד בלבד. הוא כולל את ההקמה, את העדכונים כשמשהו אצלכם משתנה ואת כל מה שמסומן ״פעיל״ בעמוד ״אז על מה אתה משלם?״. בצד מופיעה הערכה של כמה עולות חלופות נפוצות.</p>
+      </div></div>
       <div class="pricing">
         <div class="card-price">
           <div class="price"><span class="display num"><span class="shek">₪</span>549</span><span class="per" data-i18n="perMonth">לחודש<br>+ מע״מ</span></div>
@@ -686,80 +785,100 @@ section.alt{background:linear-gradient(180deg,var(--bg) 0,var(--bg-2) 90px,var(-
         </div>
       </div>
     </div>
-  </section>
+    <div class="wrap page-foot"><div class="inner"></div></div>
+  </div>
 
-  <!-- FAQ -->
-  <section class="block alt" id="faq">
-    <div class="wrap faq-grid">
-      <div class="sec-head">
-        <p class="eyebrow" data-i18n="faqEyebrow">שאלות נפוצות</p>
-        <h2 class="display" data-i18n="faqTitle">מה בעלי מכונים שואלים אותנו</h2>
+  <!-- ===== FAQ ===== -->
+  <div class="page" data-page="faq" hidden>
+    <section class="banner"><img src="img/faq.jpg" alt="" loading="lazy">
+      <div class="wrap">
+        <a class="crumb" href="#"><svg class="i" aria-hidden="true"><use href="#i-home"/></svg><span data-i18n="crumb">עמוד ראשי</span></a>
+        <p class="eyebrow tnum"></p>
+        <h2 class="display" tabindex="-1" data-i18n="faqTitle">שאלות נפוצות</h2>
+        <p class="lead" data-i18n="faqLead">תשובות קצרות לפני שמתחילים.</p>
       </div>
+    </section>
+    <div class="wrap body">
+      <div class="explain"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg></span><div>
+        <p data-i18n="faqX">לחצו על שאלה כדי לראות את התשובה. לא מצאתם את מה שחיפשתם? השאירו פרטים בעמוד ההדגמה ונחזור אליכם.</p>
+      </div></div>
       <div class="faq">
         <details><summary><span data-i18n="fq1">צריך להבין בטכנולוגיה?</span><span class="pm" aria-hidden="true">+</span></summary><p data-i18n="fa1">לא. אנחנו מקימים הכול, מעדכנים מחירים ושעות כשמשהו משתנה, ומטפלים בכל תקלה.</p></details>
         <details><summary><span data-i18n="fq2">ומה אם הוא לא יודע את התשובה?</span><span class="pm" aria-hidden="true">+</span></summary><p data-i18n="fa2">AGS עונה רק לפי המידע שנתתם לו ולא ממציא. כשלקוח משאיר שם וטלפון, הפרטים נשמרים ברשימת הלידים שלכם כדי שתחזרו אליו.</p></details>
         <details><summary><span data-i18n="fq3">באילו ערוצים זה עובד?</span><span class="pm" aria-hidden="true">+</span></summary><p data-i18n="fa3">היום בטלגרם. וואטסאפ בדרך.</p></details>
         <details><summary><span data-i18n="fq4">זה מתאים גם לסטודיו פילאטיס או יוגה?</span><span class="pm" aria-hidden="true">+</span></summary><p data-i18n="fa4">כן. כל עסק שמקבל שאלות על מחירים, מערכת שעות ושיעורי ניסיון: חדרי כושר, קרוספיט, פילאטיס, יוגה ואומנויות לחימה.</p></details>
+        <details><summary><span data-i18n="fq5">כמה זמן לוקחת ההקמה?</span><span class="pm" aria-hidden="true">+</span></summary><p data-i18n="fa5">עד 3 ימי עסקים מהרגע שקיבלנו את פרטי המכון.</p></details>
         <details><summary><span data-i18n="fq6">מה עם פרטיות הלקוחות?</span><span class="pm" aria-hidden="true">+</span></summary><p data-i18n="fa6">נשמרים רק הפרטים שצריך כדי לחזור ללקוח, בגיליון שלכם. לא מוכרים ולא משתפים מידע.</p></details>
       </div>
     </div>
-  </section>
+    <div class="wrap page-foot"><div class="inner"></div></div>
+  </div>
 
-  <!-- Demo form -->
-  <section class="block demo-band" id="demo">
-    <div class="wrap demo">
-      <div>
-        <div class="sec-head" style="margin-bottom:0">
-          <p class="eyebrow" data-i18n="demoEyebrow">הדגמה</p>
-          <h2 class="display" data-i18n="demoTitle">תראו את זה עונה ללקוחות שלכם</h2>
-          <p class="lead" data-i18n="demoLead">השאירו פרטים ונחזור אליכם תוך יום עסקים. בהדגמה תראו את AGS עונה לשאלות של לקוחות, ותוכלו לשלוח לו שאלות בעצמכם.</p>
+  <!-- ===== Demo ===== -->
+  <div class="page" data-page="demo" hidden>
+    <section class="banner"><img src="img/demo.jpg" alt="" loading="lazy">
+      <div class="wrap">
+        <a class="crumb" href="#"><svg class="i" aria-hidden="true"><use href="#i-home"/></svg><span data-i18n="crumb">עמוד ראשי</span></a>
+        <p class="eyebrow tnum"></p>
+        <h2 class="display" tabindex="-1" data-i18n="demoTitle">קבעו הדגמה</h2>
+        <p class="lead" data-i18n="demoLead">תראו את AGS עונה לשאלות של לקוחות, ותשלחו לו שאלות בעצמכם.</p>
+      </div>
+    </section>
+    <div class="wrap body">
+      <div class="explain"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg></span><div>
+        <p data-i18n="demoX">השאירו שם, שם המכון וטלפון. נחזור אליכם תוך יום עסקים כדי לקבוע הדגמה של 10 דקות.</p>
+      </div></div>
+      <div class="demo">
+        <div class="demo-side"><img src="img/demo.jpg" alt="" loading="lazy">
+          <ul class="demo-points">
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="dp1">הדגמה של 10 דקות</span></li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="dp2">חוזרים אליכם תוך יום עסקים</span></li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="dp3">₪549 לחודש + מע״מ</span></li>
+          </ul>
+        </div>
+        <div>
+          <form class="card" id="demoForm" novalidate>
+            <div class="fld"><label for="fName" data-i18n="fName">שם מלא</label><input id="fName" name="name" autocomplete="name" required aria-describedby="hName"><span class="hint" id="hName"></span></div>
+            <div class="fld"><label for="fGym" data-i18n="fGym">שם המכון או הסטודיו</label><input id="fGym" name="gym" autocomplete="organization" required aria-describedby="hGym"><span class="hint" id="hGym"></span></div>
+            <div class="fld"><label for="fPhone" data-i18n="fPhone">טלפון</label><input id="fPhone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required dir="ltr" placeholder="050-1234567" aria-describedby="hPhone"><span class="hint" id="hPhone"></span></div>
+            <div class="fld"><label for="fCity"><span data-i18n="fCity">עיר</span> <span class="opt" data-i18n="optional">(לא חובה)</span></label><input id="fCity" name="city" autocomplete="address-level2"><span class="hint"></span></div>
+            <div class="fld full"><label for="fType" data-i18n="fType">סוג העסק</label>
+              <select id="fType" name="type">
+                <option value="gym" data-i18n="tGym">חדר כושר</option>
+                <option value="crossfit" data-i18n="tCross">קרוספיט</option>
+                <option value="pilates" data-i18n="tPilates">סטודיו פילאטיס</option>
+                <option value="yoga" data-i18n="tYoga">סטודיו יוגה</option>
+                <option value="other" data-i18n="tOther">אחר</option>
+              </select>
+            </div>
+            <div class="fld full"><label for="fMsg"><span data-i18n="fMsg">משהו שחשוב שנדע?</span> <span class="opt" data-i18n="optional">(לא חובה)</span></label><textarea id="fMsg" name="msg"></textarea></div>
+            <div class="hp" aria-hidden="true"><label for="fWebsite">Website</label><input id="fWebsite" name="website" tabindex="-1" autocomplete="off"></div>
+            <div class="submit-row full">
+              <button class="btn btn-pop" type="submit" id="submitBtn"><span data-i18n="fSubmit">שלחו ונחזור אליכם</span><svg class="i arrow" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+              <p class="send-err" id="sendErr" role="alert" hidden></p>
+              <p class="privacy" data-i18n="privacy">נשתמש בפרטים רק כדי לחזור אליכם לגבי ההדגמה.</p>
+            </div>
+          </form>
+          <div class="success" id="success" hidden tabindex="-1">
+            <span class="check"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+            <h3 id="successTitle"></h3>
+            <p data-i18n="successText">נחזור אליכם תוך יום עסקים כדי לקבוע הדגמה.</p>
+          </div>
         </div>
       </div>
-      <div>
-        <form class="card" id="demoForm" novalidate>
-          <div class="fld"><label for="fName" data-i18n="fName">שם מלא</label><input id="fName" name="name" autocomplete="name" required aria-describedby="hName"><span class="hint" id="hName"></span></div>
-          <div class="fld"><label for="fGym" data-i18n="fGym">שם המכון או הסטודיו</label><input id="fGym" name="gym" autocomplete="organization" required aria-describedby="hGym"><span class="hint" id="hGym"></span></div>
-          <div class="fld"><label for="fPhone" data-i18n="fPhone">טלפון</label><input id="fPhone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required dir="ltr" placeholder="050-1234567" aria-describedby="hPhone"><span class="hint" id="hPhone"></span></div>
-          <div class="fld"><label for="fCity"><span data-i18n="fCity">עיר</span> <span class="opt" data-i18n="optional">(לא חובה)</span></label><input id="fCity" name="city" autocomplete="address-level2"><span class="hint"></span></div>
-          <div class="fld full"><label for="fType" data-i18n="fType">סוג העסק</label>
-            <select id="fType" name="type">
-              <option value="gym" data-i18n="tGym">חדר כושר</option>
-              <option value="crossfit" data-i18n="tCross">קרוספיט</option>
-              <option value="pilates" data-i18n="tPilates">סטודיו פילאטיס</option>
-              <option value="yoga" data-i18n="tYoga">סטודיו יוגה</option>
-              <option value="other" data-i18n="tOther">אחר</option>
-            </select>
-          </div>
-          <div class="fld full"><label for="fMsg"><span data-i18n="fMsg">משהו שחשוב שנדע?</span> <span class="opt" data-i18n="optional">(לא חובה)</span></label><textarea id="fMsg" name="msg"></textarea></div>
-          <div class="hp" aria-hidden="true"><label for="fWebsite">Website</label><input id="fWebsite" name="website" tabindex="-1" autocomplete="off"></div>
-          <div class="submit-row full">
-            <button class="btn btn-primary" type="submit" id="submitBtn"><span data-i18n="fSubmit">שלחו ונחזור אליכם</span><svg class="i arrow" aria-hidden="true"><use href="#i-arrow"/></svg></button>
-            <p class="send-err" id="sendErr" role="alert" hidden></p>
-            <p class="privacy" data-i18n="privacy">נשתמש בפרטים רק כדי לחזור אליכם לגבי ההדגמה.</p>
-          </div>
-        </form>
-        <div class="success" id="success" hidden tabindex="-1">
-          <span class="check"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
-          <h3 id="successTitle"></h3>
-          <p data-i18n="successText">נחזור אליכם תוך יום עסקים כדי לקבוע הדגמה.</p>        </div>
-      </div>
     </div>
-  </section>
+    <div class="wrap page-foot"><div class="inner"></div></div>
+  </div>
 </main>
 
 <footer class="site">
   <div class="wrap row">
-    <a class="brand" href="#main" aria-label="AGS">
-      <svg width="30" height="30" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="13" fill="none" stroke="var(--accent)" stroke-width="6"/><circle cx="17" cy="17" r="4" fill="var(--plate)"/></svg>
+    <a class="brand" href="#" aria-label="AGS">
+      <svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="13" fill="none" stroke="var(--accent)" stroke-width="6"/><circle cx="17" cy="17" r="4" fill="var(--pop)"/></svg>
       <span class="display">AGS</span>
     </a>
-    <nav aria-label="תחתון" data-i18n-aria="footAria">
-      <a href="#how" data-i18n="navHow">איך זה עובד</a>
-      <a href="#calc" data-i18n="navCalc">מחשבון</a>
-      <a href="#price" data-i18n="navPrice">מחיר</a>
-      <a href="#faq" data-i18n="navFaq">שאלות</a>
-    </nav>
     <span data-i18n="footL">עוזר AI לחדרי כושר וסטודיואים · נבנה בישראל · © 2026</span>
+    <span class="credit" data-i18n="credit">תמונות: Unsplash</span>
   </div>
 </footer>
 </div>
@@ -767,28 +886,80 @@ section.alt{background:linear-gradient(180deg,var(--bg) 0,var(--bg-2) 90px,var(-
 <script>
 (function(){
   "use strict";
+  // Topic pages, in order. Titles/descriptions come from the i18n keys.
+  var PAGES = [
+    {id:"about",    img:"about",    t:"tAbout",    d:"dAbout"},
+    {id:"problem",  img:"problem",  t:"tProblem",  d:"dProblem"},
+    {id:"how",      img:"how",      t:"tHow",      d:"dHow"},
+    {id:"features", img:"features", t:"tFeatures", d:"dFeatures"},
+    {id:"calc",     img:"calc",     t:"tCalc",     d:"dCalc"},
+    {id:"price",    img:"price",    t:"tPrice",    d:"dPrice"},
+    {id:"faq",      img:"faq",      t:"tFaq",      d:"dFaq"},
+    {id:"demo",     img:"demo",     t:"tDemo",     d:"dDemo"}
+  ];
+  var UI = {
+    he:{ tAbout:"מה זה AGS?", dAbout:"הסבר קצר על העוזר, ושיחה לדוגמה.",
+         tProblem:"הבעיה", dProblem:"למה פניות של לקוחות מתפספסות.",
+         tHow:"איך זה עובד", dHow:"שלושה שלבים, בלי עבודה טכנית.",
+         tFeatures:"אז על מה אתה משלם?", dFeatures:"כל מה ש־AGS עושה, מה פעיל ומה בקרוב.",
+         tCalc:"מחשבון", dCalc:"בדקו לפי המספרים של המכון שלכם.",
+         tPrice:"מחיר", dPrice:"₪549 לחודש + מע״מ, והשוואה לחלופות.",
+         tFaq:"שאלות נפוצות", dFaq:"תשובות קצרות לפני שמתחילים.",
+         tDemo:"קבעו הדגמה", dDemo:"השאירו פרטים ונחזור אליכם.",
+         topicOf:"נושא {i} מתוך {n}", backHome:"חזרה לעמוד הראשי", nextTopic:"הנושא הבא",
+         nameReq:"צריך למלא שם", gymReq:"צריך למלא את שם המכון", phoneBad:"מספר ישראלי, למשל 050-1234567", sending:"שולחים…", sendFail:"השליחה לא הצליחה. בדקו את החיבור ונסו שוב.", thanks:"תודה, {n}!",
+         be1:"מנוי חדש אחד בחודש", beEvery:"מנוי אחד כל {m} חודשים", beMany:"{k} מנויים חדשים בחודש",
+         title:"AGS Gym Assistant", desc:"AGS עונה ללקוחות של חדר הכושר שלכם 24/7, שומר כל ליד ושולח תזכורות אוטומטיות. ₪549 לחודש + מע״מ." },
+    en:{ tAbout:"What is AGS?", dAbout:"A short explanation and a sample chat.",
+         tProblem:"The problem", dProblem:"Why customer enquiries get missed.",
+         tHow:"How it works", dHow:"Three steps, no technical work.",
+         tFeatures:"So what are you paying for?", dFeatures:"Everything AGS does, what's live and what's coming.",
+         tCalc:"Calculator", dCalc:"Check it with your gym's own numbers.",
+         tPrice:"Pricing", dPrice:"₪549 a month + VAT, and the alternatives.",
+         tFaq:"FAQ", dFaq:"Short answers before you start.",
+         tDemo:"Book a demo", dDemo:"Leave your details and we'll call you back.",
+         topicOf:"Topic {i} of {n}", backHome:"Back to the home page", nextTopic:"Next topic",
+         nameReq:"Please enter your name", gymReq:"Please enter your gym's name", phoneBad:"An Israeli number, e.g. 050-1234567", sending:"Sending…", sendFail:"Sending failed. Check your connection and try again.", thanks:"Thanks, {n}!",
+         be1:"1 new member a month", beEvery:"1 new member every {m} months", beMany:"{k} new members a month",
+         title:"AGS Gym Assistant", desc:"AGS answers your gym's customers 24/7, saves every lead and sends automatic follow-ups. ₪549 a month + VAT." }
+  };
   var EN = {
-    skip:"Skip to content", navAria:"Main", footAria:"Footer", phoneAria:"Sample chat between a customer and a gym's bot",
+    skip:"Skip to content", navAria:"Main", phoneAria:"Sample chat between a customer and a gym's bot",
     brandSub:"AI assistant<br>for gyms",
-    navHow:"How it works", navCalc:"Calculator", navPrice:"Pricing", navFaq:"FAQ", navCta:"Book a demo",
+    navHome:"Home", navAbout:"What is AGS", navPrice:"Pricing", navFaq:"FAQ", navCta:"Book a demo",
     heroEyebrow:"For gyms, CrossFit, pilates and yoga",
     heroTitle:'Every message answered. Even at <span class="clock num">23:47</span>',
-    heroLead:"AGS answers your customers around the clock about prices, hours and trial classes. It saves everyone who's interested to your lead list and follows up with anyone who goes quiet. You keep coaching.",
-    heroCta:"Book a 10-minute demo", heroCta2:"How it works",
-    chatOnline:"Replying now", chatInput:"Message", chatReplay:"Watch it in real time",
+    heroLead:"AGS is an AI assistant that answers your gym's customers about prices, hours and trial classes, saves the details of everyone who's interested and reminds anyone who goes quiet. You keep coaching.",
+    heroCta:"What is AGS? Let's start", heroCta2:"All topics",
+    fact1:"₪549 a month + VAT", fact2:"Ready within 3 business days", fact3:"Replies in Hebrew and English",
+    topicsEyebrow:"Pick a topic", topicsTitle:"Everything you need to know about AGS",
+    topicsLead:"Each topic has its own page with a short explanation. Every page ends with a button back here.",
+    crumb:"Home", explainH:"In short", explainHow:"How it's calculated",
+    aboutTitle:"What is AGS?", aboutLead:"An AI assistant that answers your gym's customers for you, at any hour.",
+    aboutX1:"A customer sends a question. AGS replies within seconds, using only the information you gave it: prices, opening hours, trial classes and anything else that matters to you.",
+    aboutX2:"When someone is interested, AGS saves their name, phone number and what they asked for to your lead list, so you can get back to them. Today AGS runs on Telegram, and WhatsApp is on the way.",
+    ap1t:"Answers for you", ap1p:"Every message gets a reply, even while you're coaching.",
+    ap2t:"Saves everyone interested", ap2p:"Name, phone and what they asked for, in one list.",
+    ap3t:"Reminds anyone who goes quiet", ap3p:"One reminder message. No spam.",
+    ap4t:"Updates you every week", ap4p:"A report with the week's leads and conversations.",
+    chatOnline:"Replying now", chatInput:"Message", chatReplay:"Play the chat again",
     chatDemo:"Sample chat with a sample gym. Prices are for illustration.",
     toastT:"New lead saved to your list", toastD:"Dana · trial class · tomorrow evening",
-    probEyebrow:"The problem", probTitle:"The 5 questions you answer every day",
-    probLead:"Most enquiries arrive in the evening and at weekends, while you're coaching or already home. People who don't get a quick answer join another gym.",
-    q1:"How much is membership?", q2:"What are your hours?", q3:"Is there a trial class?", q4:"Where do I park?", q5:"What do I bring?",
+    probTitle:"The problem: enquiries left unanswered",
+    probLead:"Many enquiries get missed because they arrive when nobody is there to answer the phone.",
+    probX1:"While you're coaching, teaching a class or after you've closed, nobody is free to answer calls or messages. A customer who is waiting for an answer may contact another place in the meantime.",
+    probX2:"And most questions repeat themselves. These are examples of what customers ask gyms:",
+    boardH:"Questions that keep coming",
+    q1:"How much is membership?", q2:"What are your hours?", q3:"Is there a trial class?", q4:"Where do I park?", q5:"What do I bring to my first session?",
     boardTitle:"AGS learns your answers once",
-    boardText:"Then it answers them endlessly, in seconds, in Hebrew or English depending on how the customer wrote. It only uses the information you give it and never makes up prices.",
-    boardFine:"Tally marks are illustrative, not real data",
-    howEyebrow:"How it works", howTitle:"Ready within three business days. You never touch anything technical.",
-    s2m:"Within 3 business days", s2t:"We set it up", s2p:"AGS is ready with your gym's details, in your tone of voice.",
-    s3m:"24/7", s3t:"AGS answers", s3p:"Every message gets a reply in seconds, including nights and weekends.",
-    s4m:"Every week", s4t:"You get leads", s4p:"Everyone interested is saved and reminded if they go quiet, and you get a report at the end of the week.",
-    featEyebrow:"What you get", featTitle:"A front desk that never goes home",
+    boardText:"Then it answers them at any hour, in seconds, in Hebrew or English depending on how the customer wrote. It only uses the information you give it and never makes up prices.",
+    howTitle:"How it works", howLead:"Three steps. You never touch anything technical.",
+    howX:"You give us your gym's details: prices, hours, classes and whatever customers ask about. We set AGS up with that information, and from then on it answers customers by itself. When something changes, we update it.",
+    s1m:"Within 3 business days", s1t:"We set it up", s1p:"AGS is ready with your gym's details, in your tone of voice.",
+    s2m:"24/7", s2t:"AGS answers", s2p:"Every message gets a reply in seconds, including nights and weekends.",
+    s3m:"Every week", s3t:"You get leads", s3p:"Everyone interested is saved and reminded if they go quiet, and you get a report at the end of the week.",
+    featTitle:"So what are you paying for?", featLead:"A front desk that never goes home.",
+    featX:"These are the things AGS does. Anything marked “Live” works today. Anything marked “Coming soon” is still being built.",
     live:"Live", soon:"Coming soon",
     f1t:"24/7 replies", f1p:"Answers in seconds about prices, hours, classes and parking, at any hour.",
     f2t:"Hebrew and English", f2p:"Replies in the language the customer wrote in, never mixing the two.",
@@ -796,41 +967,38 @@ section.alt{background:linear-gradient(180deg,var(--bg) 0,var(--bg-2) 90px,var(-
     f4t:"Automatic follow-up", f4p:"Anyone who goes quiet for a day gets one friendly reminder. No spam.",
     f5t:"Weekly report", f5p:"A summary of the week's leads and conversations, sent to you.",
     f6t:"WhatsApp and booking", f6p:"Today AGS runs on Telegram. Coming soon: WhatsApp and booking sessions straight into each coach's calendar.",
-    calcEyebrow:"Return calculator", calcTitle:"What is one member you didn't lose worth?",
-    calcLead:"Move the sliders to match your gym's numbers.",
+    calcTitle:"Calculator: what is one member worth?", calcLead:"Move the sliders to match your gym's numbers.",
+    calcX:"A new member is worth your monthly price times the number of months they stay. Multiply that by the extra members a month and compare it with the cost of AGS. All the numbers here are yours; we don't assume how many members you'll gain.",
     cPrice:"Your monthly membership price", cStay:"Average months a member stays", cExtra:"Extra members a month from faster replies",
     cResultLabel:"Each month of AGS returns about", bValue:"Coming in", bCost:"Going out",
     cMemberValue:"Lifetime value of a new member", cMonthValue:"Revenue from members who joined this month", cCost:"AGS cost per month", cBreakeven:"Pays for itself with",
     cNote:"Illustration only, before VAT. Your result depends on your own numbers.",
-    priceEyebrow:"Pricing", priceTitle:"One price. Everything included.",
-    perMonth:"a month<br>+ VAT (about $149)",
+    priceTitle:"One price. Everything included.", priceLead:"₪549 a month + VAT.",
+    priceX:"There is only one price. It covers setup, updates whenever something changes on your side, and everything marked “Live” on the “So what are you paying for?” page. Next to it is an estimate of what common alternatives cost.",
+    perMonth:"a month<br>+ VAT",
     p1:"24/7 replies in Hebrew and English", p2:"Lead list and automatic reminders", p3:"Weekly report for the owner",
     p4:"Setup and updates done by us, no technical work for you",
     priceCta:"Book a demo",
     cmpTitle:"What the alternatives cost, per month", cmp1:"Answering yourself", cmp1v:"Hours of your day",
     cmp2:"Human answering service", cmp3:"Gym software with an AI add-on",
     cmpNote:"Approximate prices of common alternatives, before VAT.",
-    faqEyebrow:"FAQ", faqTitle:"What gym owners ask us",
+    faqTitle:"FAQ", faqLead:"Short answers before you start.",
+    faqX:"Tap a question to see the answer. Didn't find what you were looking for? Leave your details on the demo page and we'll get back to you.",
     fq1:"Do I need to be technical?", fa1:"No. We set everything up, update prices and hours when they change, and handle any issue.",
     fq2:"What if it doesn't know the answer?", fa2:"AGS only answers from the information you gave it and doesn't make things up. When a customer leaves a name and phone number, they're saved to your lead list so you can get back to them.",
     fq3:"Which channels does it work on?", fa3:"Telegram today. WhatsApp is on the way.",
     fq4:"Does it suit a pilates or yoga studio?", fa4:"Yes. Any business that gets questions about prices, schedules and trial classes: gyms, CrossFit, pilates, yoga and martial arts.",
+    fq5:"How long does setup take?", fa5:"Up to 3 business days from when we get your gym's details.",
     fq6:"What about customer privacy?", fa6:"Only the details needed to get back to the customer are kept, in your own sheet. Nothing is sold or shared.",
-    demoEyebrow:"Demo", demoTitle:"Watch it answer your own customers",
-    demoLead:"Leave your details and we'll get back to you within one business day. In the demo you'll see AGS answer customer questions, and you can send it questions yourself.",
+    demoTitle:"Book a demo", demoLead:"Watch AGS answer customer questions, and send it questions yourself.",
+    demoX:"Leave your name, your gym's name and a phone number. We'll get back to you within one business day to book a 10-minute demo.",
+    dp1:"A 10-minute demo", dp2:"We get back to you within one business day", dp3:"₪549 a month + VAT",
     fName:"Full name", fGym:"Gym or studio name", fPhone:"Phone", fCity:"City", optional:"(optional)", fType:"Type of business",
     tGym:"Gym", tCross:"CrossFit", tPilates:"Pilates studio", tYoga:"Yoga studio", tOther:"Other",
     fMsg:"Anything we should know?", fSubmit:"Send and we'll get back to you",
     privacy:"We'll only use your details to get back to you about the demo.",
-    successText:"We'll get back to you within one business day to book a demo.",    footL:"AI assistant for gyms and studios · Made in Israel · © 2026"
-  };
-  var MSG = {
-    he:{ nameReq:"צריך למלא שם", gymReq:"צריך למלא את שם המכון", phoneBad:"מספר ישראלי, למשל 050-1234567", sending:"שולחים…", sendFail:"השליחה לא הצליחה. בדקו את החיבור ונסו שוב.", thanks:"תודה, {n}!",
-         be1:"מנוי חדש אחד בחודש", beEvery:"מנוי אחד כל {m} חודשים", beMany:"{k} מנויים חדשים בחודש", beNone:"צריך לפחות מנוי נוסף אחד",
-         title:"AGS Gym Assistant", desc:"AGS עונה ללקוחות של חדר הכושר שלכם 24/7, שומר כל ליד ושולח תזכורות אוטומטיות. ₪549 לחודש + מע״מ." },
-    en:{ nameReq:"Please enter your name", gymReq:"Please enter your gym's name", phoneBad:"An Israeli number, e.g. 050-1234567", sending:"Sending…", sendFail:"Sending failed. Check your connection and try again.", thanks:"Thanks, {n}!",
-         be1:"1 new member a month", beEvery:"1 new member every {m} months", beMany:"{k} new members a month", beNone:"Needs at least 1 extra member",
-         title:"AGS Gym Assistant", desc:"AGS answers your gym's customers 24/7, saves every lead and sends automatic follow-ups. ₪549 a month + VAT." }
+    successText:"We'll get back to you within one business day to book a demo.",
+    footL:"AI assistant for gyms and studios · Made in Israel · © 2026", credit:"Photos: Unsplash"
   };
   var CHAT = {
     he:[
@@ -854,7 +1022,7 @@ section.alt{background:linear-gradient(180deg,var(--bg) 0,var(--bg-2) 90px,var(-
 
   var $ = function(id){ return document.getElementById(id); };
   var app = $("app");
-  var lang = "he";
+  var lang = "he", route = null, chatPlayed = false;
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // Capture Hebrew source strings from the markup
@@ -862,7 +1030,54 @@ section.alt{background:linear-gradient(180deg,var(--bg) 0,var(--bg-2) 90px,var(-
   document.querySelectorAll("[data-i18n]").forEach(function(el){ if (!(el.dataset.i18n in HE)) HE[el.dataset.i18n] = el.innerHTML; });
   document.querySelectorAll("[data-i18n-aria]").forEach(function(el){ HE_ARIA[el.dataset.i18nAria] = el.getAttribute("aria-label"); });
 
-  function t(key, vars){ var s = MSG[lang][key]; if (vars) for (var k in vars) s = s.replace("{"+k+"}", vars[k]); return s; }
+  function t(key, vars){ var s = UI[lang][key]; if (vars) for (var k in vars) s = s.replace("{"+k+"}", vars[k]); return s; }
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+  var ARROW = '<svg class="i arrow" aria-hidden="true"><use href="#i-arrow"/></svg>';
+
+  // Intro grid + per-page footer navigation
+  function renderNav(){
+    $("topicGrid").innerHTML = PAGES.map(function(p, i){
+      return '<li><a class="topic' + (i === 0 ? ' first' : '') + '" href="#' + p.id + '">' +
+        '<span class="ph"><img src="img/' + p.img + '.jpg" alt="" loading="lazy"><span class="n">' + String(i+1).padStart(2,"0") + '</span></span>' +
+        '<div class="tx"><h3><span>' + esc(t(p.t)) + '</span>' + ARROW.replace('i arrow','i') + '</h3><p>' + esc(t(p.d)) + '</p></div></a></li>';
+    }).join("");
+    PAGES.forEach(function(p, i){
+      var page = document.querySelector('.page[data-page="' + p.id + '"]');
+      page.querySelector(".tnum").textContent = t("topicOf", {i:i+1, n:PAGES.length});
+      var nx = PAGES[i+1], html = '<a class="btn btn-primary back" href="#"><svg class="i back-ic" aria-hidden="true"><use href="#i-home"/></svg><span>' + esc(t("backHome")) + '</span></a>';
+      if (nx) html += '<a class="next" href="#' + nx.id + '"><small>' + esc(t("nextTopic")) + '</small><b>' + esc(t(nx.t)) + ARROW.replace('i arrow','i') + '</b></a>';
+      page.querySelector(".page-foot .inner").innerHTML = html;
+    });
+  }
+
+  // Hash routing: "" is the intro, otherwise one of PAGES
+  function show(id, focus){
+    var known = PAGES.some(function(p){ return p.id === id; });
+    if (!known) id = "";
+    var changed = id !== route;
+    route = id;
+    document.querySelectorAll(".page").forEach(function(pg){
+      var on = pg.dataset.page === id;
+      pg.hidden = !on;
+      if (on && changed && !reduce){ pg.classList.remove("enter"); void pg.offsetWidth; pg.classList.add("enter"); }
+    });
+    document.querySelectorAll(".navlinks a").forEach(function(a){ a.classList.toggle("active", a.dataset.route === id); });
+    var p = PAGES.filter(function(x){ return x.id === id; })[0];
+    document.title = p ? t(p.t) + " · AGS" : t("title");
+    if (changed){
+      window.scrollTo(0, 0);
+      if (focus && p){ var h = document.querySelector('.page[data-page="' + id + '"] h2'); if (h) h.focus({preventScroll:true}); }
+      if (id === "about" && !chatPlayed){ chatPlayed = true; renderChat(true); }
+    }
+  }
+  function onHash(){
+    var h = location.hash.slice(1);
+    if (h === "en"){ setLang("en", false); h = ""; }
+    if (h === "topics"){ show("", false); var g = $("topics"); if (g) g.scrollIntoView({behavior: reduce ? "auto" : "smooth"}); return; }
+    if (h === "main") return;
+    show(h, true);
+  }
+  window.addEventListener("hashchange", onHash);
 
   function setLang(l, fromUser){
     lang = l;
@@ -873,21 +1088,18 @@ section.alt{background:linear-gradient(180deg,var(--bg) 0,var(--bg-2) 90px,var(-
     app.lang = l;
     document.documentElement.lang = l;
     document.documentElement.dir = app.dir;
-    document.title = MSG[l].title;
-    var md = document.querySelector('meta[name="description"]'); if (md) md.setAttribute("content", MSG[l].desc);
+    var md = document.querySelector('meta[name="description"]'); if (md) md.setAttribute("content", t("desc"));
     var btn = $("langBtn");
-    btn.textContent = l === "en" ? "עב" : "EN";
+    $("langTxt").textContent = l === "en" ? "עב" : "EN";
     btn.setAttribute("lang", l === "en" ? "he" : "en");
     btn.setAttribute("aria-label", l === "en" ? "מעבר לעברית" : "Switch to English");
+    renderNav();
     renderChat(false);
-    drawTallies();
     calc();
     ["fName","fGym","fPhone"].forEach(function(id){ if ($(id).getAttribute("aria-invalid") === "true") validate(id); });
     if (!$("success").hidden) $("successTitle").textContent = t("thanks",{n:lastName});
-    if (fromUser){
-      try { localStorage.setItem("ags-lang", l); } catch(e){}
-      try { history.replaceState(null, "", l === "en" ? "#en" : location.pathname + location.search); } catch(e){}
-    }
+    if (route !== null){ var r = route; route = null; show(r, false); }
+    if (fromUser){ try { localStorage.setItem("ags-lang", l); } catch(e){} }
   }
 
   // Chat
@@ -911,7 +1123,7 @@ section.alt{background:linear-gradient(180deg,var(--bg) 0,var(--bg-2) 90px,var(-
     toast.classList.remove("pop");
     if (!animate || reduce){ msgs.forEach(function(m){ chatEl.appendChild(bubble(m,false)); }); toast.style.visibility = ""; return; }
     toast.style.visibility = "hidden";
-    var delay = 250;
+    var delay = 400;
     msgs.forEach(function(m){
       if (m.w === "bot"){
         timers.push(setTimeout(function(){
@@ -929,19 +1141,6 @@ section.alt{background:linear-gradient(180deg,var(--bg) 0,var(--bg-2) 90px,var(-
     timers.push(setTimeout(function(){ toast.style.visibility = ""; toast.classList.add("pop"); }, delay - 300));
   }
   $("replayBtn").addEventListener("click", function(){ renderChat(true); });
-
-  // Whiteboard tally marks (groups of five)
-  function tallySVG(n){
-    var w = 0, parts = [];
-    for (var g = 0; g < Math.ceil(n/5); g++){
-      var c = Math.min(5, n - g*5), x0 = w, lines = "";
-      for (var i = 0; i < Math.min(4,c); i++){ var x = x0 + 2 + i*6; lines += '<path d="M'+x+' 3 L'+(x+ (i%2? .6 : -.4))+' 23"/>'; }
-      if (c === 5) lines += '<path d="M'+(x0-1)+' 19 L'+(x0+23)+' 6"/>';
-      parts.push(lines); w += Math.min(4,c)*6 + 12;
-    }
-    return '<svg viewBox="-2 0 '+(w+2)+' 26" style="width:'+(w+2)+'px">'+parts.join("")+'</svg>';
-  }
-  function drawTallies(){ document.querySelectorAll(".tally").forEach(function(el){ el.innerHTML = tallySVG(+el.dataset.t); el.setAttribute("aria-hidden","true"); }); }
 
   // Calculator
   var COST = 549;
@@ -1015,46 +1214,12 @@ section.alt{background:linear-gradient(180deg,var(--bg) 0,var(--bg-2) 90px,var(-
     });
   });
 
-  // Header state + active section
-  var header = $("header");
-  function onScroll(){ header.classList.toggle("scrolled", window.scrollY > 8); }
-  window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
-  if ("IntersectionObserver" in window){
-    var links = {}; document.querySelectorAll(".navlinks a").forEach(function(a){ links[a.getAttribute("href").slice(1)] = a; });
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(en){
-        if (en.isIntersecting){ for (var k in links) links[k].classList.toggle("active", k === en.target.id); }
-      });
-    }, {rootMargin:"-45% 0px -50% 0px"});
-    ["how","features","calc","price","faq","demo","problem"].forEach(function(id){ var s = $(id); if (s) io.observe(s); });
-  }
-
-
-  // Scroll transitions (only for content below the fold at load, so the first view is complete)
-  if (!reduce && "IntersectionObserver" in window){
-    var vh = window.innerHeight, targets = [];
-    function mark(el, cls, d){ if (el.getBoundingClientRect().top > vh * .92){ el.classList.add(cls); el.style.setProperty("--d", d + "s"); targets.push(el); } }
-    document.querySelectorAll(".sec-head").forEach(function(h){
-      if (h.getBoundingClientRect().top > vh * .92){ h.classList.add("pre"); targets.push(h); }
-      Array.prototype.forEach.call(h.children, function(c, i){ mark(c, c.tagName === "H2" ? "rv-h" : "rv", i * .09); });
-    });
-    [".board-wrap > *",".steps > li",".features > .feature",".calc > *",".pricing > *",".faq > details","#demo form.card"].forEach(function(sel){
-      document.querySelectorAll(sel).forEach(function(el, i){ mark(el, "rv", .12 + (i % 3) * .08 + Math.floor(i/3) * .05); });
-    });
-    var alive = false;
-    var rio = new IntersectionObserver(function(entries){
-      alive = true;
-      entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add("in"); en.target.classList.remove("pre"); rio.unobserve(en.target); } });
-    }, {rootMargin:"0px 0px -10% 0px", threshold:.08});
-    targets.forEach(function(el){ rio.observe(el); });
-    setTimeout(function(){ if (!alive) targets.forEach(function(el){ el.classList.add("in"); el.classList.remove("pre"); }); }, 2500);
-  }
-
   $("langBtn").addEventListener("click", function(){ setLang(lang === "he" ? "en" : "he", true); });
 
   var saved = null; try { saved = localStorage.getItem("ags-lang"); } catch(e){}
   if (location.hash === "#en" || saved === "en") setLang("en", false);
-  else { renderChat(false); drawTallies(); calc(); }
+  else { renderNav(); renderChat(false); calc(); }
+  onHash();
 })();
 </script>
 </body>
